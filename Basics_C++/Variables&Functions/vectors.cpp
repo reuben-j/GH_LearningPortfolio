@@ -6,6 +6,8 @@ int main()
 {
     //! Declaring a Vector 
 
+
+
     vector<int> vect = {1, 2, 3, 4};
     //* basic declaration with elements displayed from start
     
@@ -50,22 +52,21 @@ int main()
     //TODO vect.begin();.
     //TODO vect.end();
     for(vector<int>::iterator it = vect.begin(); it != vect.end(); ++it) {
-        // cout << *it << " ";
+        //!  cout << *it << " "; // output = 1 2 3 4
     }
-    //* output = 1 2 3 4
     //* Using a for loop with an iterator type var, loop from beginning (vect.begin()) to end (vect.end()) and cout each element
     //* vect.begin() itself will return an iterator to the element of vect[0], allow you to derefence it and cout its value as shown in cout **<< *it**
 
 
 
     //TODO vect.empty()
-        //! cout << vect.empty();
+        //! cout << vect.empty(); // output false
     //* returns a true or false to whether or not the vector is empty
 
 
 
     //TODO vect.size()
-        //! cout << vect.size();
+        //! cout << vect.size(); // output 4
     //* Returns the numbers of elements in the vector
 
 
@@ -134,6 +135,16 @@ int main()
         myVect5.insert(myVect5.begin() + 1, 6969);
         //! cout << myVect5[1]; // output 6969
     //* Allow you to insert a value at a specified positon and move other elements down the vector accordingly
+
+
+
+    //TODO vector.emplace()
+
+    //TODO assign
+
+    //TODO erase
+
+    //TODO clear
 }
 
 // to update code runner to allow c++20 features, update json file using this link for info: 
