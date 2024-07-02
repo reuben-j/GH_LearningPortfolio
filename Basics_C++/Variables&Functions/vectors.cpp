@@ -101,7 +101,7 @@ int main()
 
 
 
-    //TODO vector.push_back()
+    //TODO vector.push_back(value)
         vector<int> myVect3 = {1, 2, 3, 4};
         for(vector<int>::iterator x = myVect3.begin(); x != myVect3.end(); ++x) {
             //! cout << *x << " ";
@@ -112,7 +112,28 @@ int main()
         } // output 1 2 3 4 5
     //* Allow you to directly place a new element at the back of the vector and automatically increase container size
 
-    //! i love you abi!
+
+
+
+    //TODO vector.pop_back()
+        vector<string> myVect4 = {"Hello", "Hiya", "Wassup"};
+        for(vector<string>::iterator x = myVect4.begin(); x != myVect4.end(); ++x) {
+            //! cout << *x << " ";
+        } // output = Hello Hiya Wassup
+        myVect4.pop_back();
+        for(vector<string>::iterator x = myVect4.begin(); x != myVect4.end(); ++x) {
+            //! cout << *x << " ";
+        } // output = Hello Hiya
+    //* Allow you to easily 'pop off' the last component of the vector and to automatically readjust the size of the vector
+
+
+
+    //TODO vector.insert(position, value)
+        vector<int> myVect5 = {123, 234, 345, 456};
+        //! cout << myVect5[1] << endl; // output 234
+        myVect5.insert(myVect5.begin() + 1, 6969);
+        //! cout << myVect5[1]; // output 6969
+    //* Allow you to insert a value at a specified positon and move other elements down the vector accordingly
 }
 
 // to update code runner to allow c++20 features, update json file using this link for info: 
