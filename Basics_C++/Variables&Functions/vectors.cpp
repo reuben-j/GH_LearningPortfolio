@@ -138,8 +138,18 @@ int main()
 
 
 
-    //TODO vector.emplace()
 
+    //TODO vector.emplace(position, value)
+        vector<int> myVect6 = {90, 89, 78, 67};
+            for(vector<int>::iterator x = myVect6.begin(); x != myVect6.end(); ++x) {
+                cout << *x << " "; //ouput 90 89 78 67
+            }
+        myVect6.emplace(myVect6.begin(), 12);
+
+            for(vector<int>::iterator x = myVect6.begin(); x != myVect6.end(); ++x) {
+                cout << *x << " "; // output 12  90 89 78 67
+            }
+    //* Easy way to place a new element into the vector with a specific position and value
     //TODO assign
 
     //TODO erase
