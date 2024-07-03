@@ -115,7 +115,6 @@ int main()
 
 
 
-
     //TODO vector.pop_back()
         vector<string> myVect4 = {"Hello", "Hiya", "Wassup"};
         for(vector<string>::iterator x = myVect4.begin(); x != myVect4.end(); ++x) {
@@ -142,15 +141,28 @@ int main()
     //TODO vector.emplace(position, value)
         vector<int> myVect6 = {90, 89, 78, 67};
             for(vector<int>::iterator x = myVect6.begin(); x != myVect6.end(); ++x) {
-                cout << *x << " "; //ouput 90 89 78 67
+                //! cout << *x << " "; //ouput 90 89 78 67
             }
-        myVect6.emplace(myVect6.begin(), 12);
+
+            myVect6.emplace(myVect6.begin(), 12);
 
             for(vector<int>::iterator x = myVect6.begin(); x != myVect6.end(); ++x) {
-                cout << *x << " "; // output 12  90 89 78 67
+                //! cout << *x << " "; // output 12  90 89 78 67
             }
     //* Easy way to place a new element into the vector with a specific position and value
-    //TODO assign
+
+
+
+    //TODO assign(size, value)
+        vector<int> myVect7 = {12};
+            myVect7.assign(5, 25);
+        for(vector<int>::iterator x = myVect7.begin(); x != myVect7.end(); ++x) {
+            cout << *x <<  " "; //output 25 25 25 25 25 
+        }
+    //* Allow you to allocate a specified number of a certain variable
+
+
+
 
     //TODO erase
 
