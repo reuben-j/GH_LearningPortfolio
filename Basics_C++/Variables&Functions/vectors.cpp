@@ -163,10 +163,12 @@ int main()
 
 
 
-
-    //TODO erase
+    //TODO erase(position)      erase(startingPosition, endingPosition)
+        
 
     //TODO clear
+        myVect7.clear();
+    //* Empties the whole vector of values
 }
 
 // to update code runner to allow c++20 features, update json file using this link for info: 
