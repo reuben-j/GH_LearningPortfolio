@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -88,4 +89,10 @@ int main() {
     //* Erases everthing after the specified index
 
     
+
+    //TODO string.reverse(start index, end index)
+    string toBeReversed = "hello";
+    reverse(toBeReversed.begin(), toBeReversed.end());
+        //! cout << toBeReversed; //output olleh
+    //* Easi;y reverse string by passing beginning and end of original string
 }
