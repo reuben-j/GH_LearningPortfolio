@@ -4,15 +4,12 @@ using namespace std;
 
 int main()
 {
-    //! Declaring a Vector 
-
-
-
+    //TODO Declaring a Vector 
     vector<int> vect = {1, 2, 3, 4};
     //* basic declaration with elements displayed from start
     
 
-
+    //TODO Declaring a vector
     vector<int> newVect; // see below for more .push_back() info 
     newVect.push_back(10);
     newVect.push_back(20);
@@ -20,12 +17,13 @@ int main()
     //* push_back puts the newest element at the back and moves everything else up +1
     
 
-
+    //TODO Vector declaration
     vector<int> newerVect(3, 10);
     //* declare a vector of size 3 with each element having the value of 10
     
     
 
+    //TODO Vector declaration
     int arr[] = {10, 20, 30};
     int n = sizeof(arr) / sizeof(arr[0]);
     vector<int> newererVect(arr, arr + n);
@@ -33,11 +31,13 @@ int main()
 
 
 
+    //TODO Vector declaration
     vector<int>vect2(vect.begin(), vect.end());
     //* using the top vector, initialise a vector from another whole vector   
 
 
 
+    //TODO Vector declaration
     vector<int> vectNewest(10);
     int value = 4;
     fill(vectNewest.begin(), vectNewest.end(), value);
@@ -59,6 +59,13 @@ int main()
 
 
 
+    //TODO vector.at()
+    vector<int> vec{12,23,34};
+    //! cout << vec.at(0); //ouput 12
+    //* Allow you to specify which position to access
+
+
+
     //TODO vect.empty()
         //! cout << vect.empty(); // output false
     //* returns a true or false to whether or not the vector is empty
@@ -68,6 +75,12 @@ int main()
     //TODO vect.size()
         //! cout << vect.size(); // output 4
     //* Returns the numbers of elements in the vector
+
+
+
+    //TODO vect.capacity()
+        //! cout << vec.capacity();
+    //* Returns the size of the allocated storage of the container
 
 
 
@@ -157,19 +170,54 @@ int main()
         vector<int> myVect7 = {12};
             myVect7.assign(5, 25);
         for(vector<int>::iterator x = myVect7.begin(); x != myVect7.end(); ++x) {
-            cout << *x <<  " "; //output 25 25 25 25 25 
+            //! cout << *x <<  " "; //output 25 25 25 25 25 
         }
     //* Allow you to allocate a specified number of a certain variable
 
 
 
-    //TODO erase(position)      erase(startingPosition, endingPosition)
-        
+    //TODO erase(position), erase(startingPosition, endingPosition)
+        vector<int> myNewVect = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            for(vector<int>::iterator x = myNewVect.begin(); x != myNewVect.end(); ++x) {
+                //! cout << *x << " "; // outputs 1 2 3 4 5 6 7 8 9 10
+            }
+        myNewVect.erase(myNewVect.begin(), myNewVect.begin()+4);
+            for(vector<int>::iterator x = myNewVect.begin(); x != myNewVect.end(); ++x) {
+                //! cout << *x << " "; // outputs 5 6 7 8 9 10
+            }
+    //* Function to erase a certain position, or a range of positions. 
+
+
 
     //TODO clear
-        myVect7.clear();
+        //! myVect7.clear();
     //* Empties the whole vector of values
+
+
+
+    //TODO vect.resize(new size)
+    vector<int> VectSize{90, 80, 70};
+    //! cout << VectSize.size() << endl << VectSize.capacity(); //ouput 3 3
+    VectSize.resize(10);
+    //! cout << endl << endl << VectSize.size() << endl << VectSize.capacity(); //ouput 10 10
+    //* function to resize container capacity to given value
+    //* if size is increased, so does capacity. But capacity can increase but size wont unless it is filled with values
+    //* Capacity seems to be a reservation of space
+
+
+
+    //TODO vect.reserve(new capacity)
+    vector<int> VectCap{1, 2};
+     cout << VectCap.capacity() << endl << VectCap.size() << endl; // output 0 0
+    VectCap.reserve(1);
+     cout << endl << VectCap.capacity() << endl << VectCap.size(); //ouput 10 0
+    //* function to reserve a specific amount of space. If has values in it, it will increase capacity to specified. If the reserve value is 
+    //* less than the actual amount of values, no error will be thrown. 
+
 }
+
+
+
 
 // to update code runner to allow c++20 features, update json file using this link for info: 
 // https://github.com/formulahendry/vscode-code-runner/issues/1052 
