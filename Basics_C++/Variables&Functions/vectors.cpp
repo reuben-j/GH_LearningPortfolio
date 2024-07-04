@@ -54,7 +54,7 @@ int main()
     //TODO how to best iterate through vector
     vector<string> testVector = {"Reuben", "Abigail", "Marcus"};
     for(auto i : testVector) {
-        cout << i << " "; //ouput Reuben Abigail Marcus
+        //! cout << i << " "; //ouput Reuben Abigail Marcus
     }
     //* Utilising the auto variable, iterate easily through a vector
 
@@ -223,6 +223,24 @@ int main()
         //! out << endl << VectCap.capacity() << endl << VectCap.size(); //ouput 10 0
     //* function to reserve a specific amount of space. If has values in it, it will increase capacity to specified. If the reserve value is 
     //* less than the actual amount of values, no error will be thrown. 
+
+
+
+    //TODO 2 dimensional vector declaration and iteration
+    vector<vector<int>> matrix = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    for(auto i : matrix) {
+        for(auto y : i) {
+            //! cout << y << " "; //output 1 2 3 4 5 6 
+            cout << matrix[y].size() << endl;
+        }
+    }
+
+    cout << matrix.size();
+    //* Declare the vector by having a vectors of vectors
+    //* For the for each loop, see above. Use the first variable as the group for the second for each loop
 }
 
 // to update code runner to allow c++20 features, update json file using this link for info: 
