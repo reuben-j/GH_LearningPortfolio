@@ -51,6 +51,15 @@ int main()
 
 
 
+    //TODO how to best iterate through vector
+    vector<string> testVector = {"Reuben", "Abigail", "Marcus"};
+    for(auto i : testVector) {
+        cout << i << " "; //ouput Reuben Abigail Marcus
+    }
+    //* Utilising the auto variable, iterate easily through a vector
+
+
+
     //TODO vect.begin();.
     //TODO vect.end();
     for(vector<int>::iterator it = vect.begin(); it != vect.end(); ++it) {
