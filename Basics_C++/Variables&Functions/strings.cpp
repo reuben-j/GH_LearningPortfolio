@@ -16,7 +16,7 @@ int main() {
 
 
 
-    //TODO string[], string.at(location)
+    //TODO string[location], string.at(location)
     string nameAbi = "Abigail";
         //! cout << nameAbi[0] << endl << nameAbi.at(0); //output A A
     //* Returns the value of the specified location
@@ -66,6 +66,24 @@ int main() {
 
 
 
-    //TODO 
+    //TODO string.insert(index, string)
+    string strInsert = "Hello ";
+    string toBeInserted = "Mate";
+    string newInsert = strInsert.insert(strInsert.length(), toBeInserted);
+        //! cout << newInsert; //output Hello Mate
+    //* Functions allows you to insert a new string with the information of index and new string to be inserted
 
+
+
+    //TODO string.erase()
+    string toBeErased = "Goodbye";
+        //! cout << toBeErased << endl; //ouput Goodbye
+    toBeErased.erase();
+        //! cout << "Is there anything next to this ->" << toBeErased << "?"; //no output from toBeErased string
+    //* Erases the entire string
+
+    string partlyErased = "I'm Leaving";
+    partlyErased.erase(3);
+        //! cout << partlyErased; //output I'm
+    //* Erases everthing after the specified index
 }
