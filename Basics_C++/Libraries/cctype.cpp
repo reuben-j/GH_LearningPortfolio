@@ -92,7 +92,6 @@ cout << endl << "printable: " << printable << " / " << nonPrintable;
 //* isprint returns a bool whether or not the char is printable or not. Characters like \n \t are not printable
 
 
-
 //TODO ispunct()
 string str3 = "This, is! checking for : punctuation!";
 int punctuation = 0;
@@ -107,5 +106,14 @@ cout << endl << "There are these many punctuation chars: " << punctuation;
 
 
 
-//TODO 
+//TODO isspace()
+string str4 = "This is checking for white spaces";
+int whiteSpaces = 0;
+for(auto i : str4) {
+    char c = i;
+    if(isspace(i)) {
+        whiteSpaces++;
+    }
+}
+cout << endl << "Number of white spaces: " << whiteSpaces;
 }
