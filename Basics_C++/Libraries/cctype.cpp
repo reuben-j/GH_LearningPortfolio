@@ -116,4 +116,23 @@ for(auto i : str4) {
     }
 }
 cout << endl << "Number of white spaces: " << whiteSpaces;
+//* isspace() return true if char is a space 
+
+
+
+//TODO isxdigit()
+string hexa = "123456!@#$%^";
+int hexaInts = 0;
+for(auto i : hexa) {
+    char c = i;
+    if(isxdigit(c)) {
+        hexaInts++;
+    }
+}
+cout << endl << "Number of hexadecimals: " << hexaInts << " / " << hexa.length();
+//* Return true is variable is hexadecimal or not
+
+
+
+//TODO 
 }
