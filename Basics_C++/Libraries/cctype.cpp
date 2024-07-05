@@ -134,5 +134,9 @@ cout << endl << "Number of hexadecimals: " << hexaInts << " / " << hexa.length()
 
 
 
-//TODO 
+//TODO tolower(), toupper()
+char low = 'a';
+char up = 'A';
+cout << endl << char(toupper(low)) << endl << char(tolower(up));
+//* As it says, change char from low to high, then high to low
 }
