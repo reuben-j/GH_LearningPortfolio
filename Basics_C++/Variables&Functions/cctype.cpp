@@ -35,4 +35,16 @@ if(isdigit(num)) {
     cout << num << " " << "This is not a number";
 }
 //* Returns bool whether or not variable is a decimal digit or not
+
+
+
+//TODO isblank()
+char str = ' ';
+if(isblank(str)){
+    cout << endl << str << " " << "is blank";
+} else {
+    cout << endl <<str << " ""is not blank";
+}
+//* Return bool whether or not char is blank
+ 
 }
