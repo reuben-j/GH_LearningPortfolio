@@ -12,4 +12,9 @@ if(isalnum(cha) == true) {
 } else {
     cout << "Tis not!";
 }
+//* Returns bool whether variable is alphanumeric or not
+
+
+
+//TODO 
 }
