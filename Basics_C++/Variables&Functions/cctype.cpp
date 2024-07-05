@@ -58,7 +58,7 @@ for(int i = 0; i < sentence.length(); i++){
         count ++;
     }   
 }
-cout << endl <<  count;
+cout << endl << "control chars: " << count;
 //* Return bool whether or not var is a control char such as \n \t \b \r \f
 
 
@@ -70,10 +70,42 @@ for(int i = 0; i < str1.length(); i++) {
     char c = str1[i];
     if(isupper(c)) {
         upper++;
-    } else {
+    } else if (islower(c)) {
         lower++;
-    }
+    } 
 }
 cout << endl << "upper: " <<  upper << endl << "lower: " << lower;
 
+
+
+//TODO isprint()
+string str2 = "This \n checks \t for \n printable \n chars";
+int printable = 0;
+int nonPrintable = str2.length() - printable;
+for(int i = 0; i < str2.length(); i++) {
+    char c = str2[i];
+    if(isprint(c)!= 0) {
+        printable++;
+    }   
+}
+cout << endl << "printable: " << printable << " / " << nonPrintable;
+//* isprint returns a bool whether or not the char is printable or not. Characters like \n \t are not printable
+
+
+
+//TODO ispunct()
+string str3 = "This, is! checking for : punctuation!";
+int punctuation = 0;
+for(auto i : str3) {
+    char c = i;
+    if(ispunct(c)!=0) {
+        punctuation++;
+    }
+}
+cout << endl << "There are these many punctuation chars: " << punctuation;
+//* Return true if char is a punctuation char
+
+
+
+//TODO 
 }
