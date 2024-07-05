@@ -43,8 +43,37 @@ char str = ' ';
 if(isblank(str)){
     cout << endl << str << " " << "is blank";
 } else {
-    cout << endl <<str << " ""is not blank";
+    cout << endl << str << " " << "is not blank";
 }
 //* Return bool whether or not char is blank
- 
+
+
+
+//TODO iscntrl()
+string sentence = "My name is\n Reuben\t";
+int count = 0;
+for(int i = 0; i < sentence.length(); i++){
+    char c = sentence[i];
+    if(iscntrl(c)){
+        count ++;
+    }   
+}
+cout << endl <<  count;
+//* Return bool whether or not var is a control char such as \n \t \b \r \f
+
+
+
+//TODO isupper(), islower()
+string str1 = "UPPER lower MiXeD";
+int upper = 0, lower = 0;
+for(int i = 0; i < str1.length(); i++) {
+    char c = str1[i];
+    if(isupper(c)) {
+        upper++;
+    } else {
+        lower++;
+    }
+}
+cout << endl << "upper: " <<  upper << endl << "lower: " << lower;
+
 }
