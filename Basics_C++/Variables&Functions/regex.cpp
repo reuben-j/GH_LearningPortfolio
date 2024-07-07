@@ -24,7 +24,7 @@ int main() {
     
    
     //TODO regex_search
-    string text2[] = {"are", "bare", "ware", "aadarekaadw", "aasdasdasd"};
+    string text2[] = {"are", "bare", "ware", "aadarekaadw", "aasdasdasd", "adw"};
 
     regex pattern2("a.*e");
     int found = 0;
