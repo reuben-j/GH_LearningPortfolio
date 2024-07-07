@@ -51,3 +51,19 @@ print(car1 + " " + car2 + " " + car3) #outputL porsche lamborghini ferrari
 str01 = "Abigail"
 abiAge = 23
 print(str01, abiAge) #output: Abigail 23
+
+#function declaration
+def myFunc(): #function naming 
+    print("Hiya abigail") #function content
+    
+myFunc() #calling function - output: Hiya abigail
+
+#local and global variables
+#all the above variables are global because they are defined outside of a function
+def newFunc1():
+    num01 = 23 #local variable, can only be accessed inside function
+    num02 = 4 #local variable
+    print(num1 * num2)
+newFunc1()
+
+## print(num02) this print function can not access num02 as it was delcared inside the function
