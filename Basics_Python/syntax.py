@@ -41,3 +41,13 @@ print(num1, num2, num3) #outuput 3 3 3
 fruits = ["apple", "banana", "orange"]
 fruit1, fruit2, fruit3 = fruits
 print(fruit1, fruit2, fruit3) #output: apple banana orange
+
+#multiple ways to print multiple variables using the + operator
+cars = ["porsche", "lamborghini", "ferrari"]
+car1, car2, car3 = cars
+print(car1 + " " + car2 + " " + car3) #outputL porsche lamborghini ferrari
+
+#output different varaible types with a comma. Automatically provides space between them
+str01 = "Abigail"
+abiAge = 23
+print(str01, abiAge) #output: Abigail 23
