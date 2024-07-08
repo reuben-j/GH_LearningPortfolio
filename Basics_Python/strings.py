@@ -62,5 +62,27 @@ price = 59.133143
 str05 = f"this will cost you {price:.2f} dollars"
 print(str05) #output - this will cost you 59.13 dollars
 
+#use a placeholder to allow you to do a modifier inside a string
 str06 = f"please print 12 * 23 = {12 * 23}"
-print(str06)
+print(str06) #output - please print 12 * 23 = 276
+
+#escape characters
+
+#  \" text \" to allow you to have double quotes inside string
+str07 = "You are a \"legend\""
+print(str07) #output - You are a "legend"
+
+#  \' text \'
+str08 = "\'A\' is my favourite character"
+print(str08) #output - 'A' is my favourite character
+
+# backslash \
+str101 = "Testing the back\\slash escape char"
+print(str101) #output - Testing the back\slash escape char
+
+# \n newline
+str09 = "Testing the newline \nescape character"
+print(str09) #output - Testing the newline 
+#                      escape character
+             
+             
