@@ -140,9 +140,5 @@ strIsAlpha = "Ithinkthisisallalphabetic"
 print(strIsAlpha.isalpha()) #output - True
 
 # string.isascii() return bool whether all character are ascii
-strIsAscii = "Testing For Ascii Char 123 !@#"
-print(strIsAscii.isascii()) #output True
-
-# string.isdecimal() returns True is all characters are decimal (0-9)
-strIsDecimal = "12345566789"
-print(strIsDecimal.isdecimal()) #output - True
+strIsAscii = "Testing For Ascii Char 123"
+print(strIsAscii.isascii())
