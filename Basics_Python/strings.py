@@ -25,3 +25,23 @@ print(str3[2:]) #output 'llo world!'
 
 #slice from the end of the string by using '-'
 print(str3[-6:-1])
+
+# upper()
+string1 = "reuben"
+print(string1.upper()) #output REUBEN
+
+# lower()
+string2 = "REUBEN"
+print(string2.lower()) #output reuben
+
+#strip() removes whitespaces from string
+string3 = "  I sure hate whitespace!   "
+print(string3.strip()) #output 'I sure hate whitespace'
+
+# replace() function replaces one string with another
+string4 = "Hiya buddy"
+print(string4.replace("Hiya", "Cya")) #output Jumb buddy
+
+#split() function splits the string into substrings where ever a certain separator is present
+string5 = "lets, look, at, the, duck"
+print(string5.split(",")) #output - ['lets', ' look', ' at', ' the', ' duck']
