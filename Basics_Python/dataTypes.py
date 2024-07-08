@@ -6,7 +6,9 @@ str1 = str("Reuben")
 # Numerics types
 num = int(2)
 num1 = float(3.31)
-num2 = complex(102838231.12312312)
+num2 = complex(3+5j)
+
+print(num2)
 
 #Sequence types
 
