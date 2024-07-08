@@ -85,4 +85,18 @@ str09 = "Testing the newline \nescape character"
 print(str09) #output - Testing the newline 
 #                      escape character
              
-             
+#! String functions - 45 in total
+
+# string.capitalize() - return new word with first letter capitalized
+strCap = "hello mate"
+print(strCap.capitalize()) #output Hello mate
+
+# string.asefold() - Converts string to lower case
+strCaseFold = "HELLO MY BOY"
+print(strCaseFold.casefold()) #output - hello my boy
+
+#string.center(int) - center align the string using a specified fill character (space is default)
+#what ever the int inout is, it is placed in  the middle of that many characters
+strCenter = "Middle"
+print(strCenter.center(20, "-")) #output - -------Middle-------
+
