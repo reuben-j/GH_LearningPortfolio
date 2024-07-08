@@ -25,5 +25,6 @@ int main() {
         cout << readFromFile << "\n"; //outputs text from file
     }
 
+    // close file - great practice :)
     MyReadFile.close();
 }
