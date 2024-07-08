@@ -100,3 +100,18 @@ print(strCaseFold.casefold()) #output - hello my boy
 strCenter = "Middle"
 print(strCenter.center(20, "-")) #output - -------Middle-------
 
+#string.count("substring") - returns a number of times a specified value occurs in the string
+strCount = "I love Abi, Abi, Abi is great!"
+num = strCount.count("Abi")
+print(num) #output - 3
+
+# string.encode will encode the string with a default choice of UTF-8 or a specified encoding
+strEncode = "Reuben is my name!"
+coded = strEncode.encode(encoding="ascii",errors="replace")
+print(coded) #output - b'Reuben is my name!'
+
+# string.endswith(substring) - returns a bool is the string ends with specified substring
+strEnds = "I am looking for Abi"
+endsWithAbi = strEnds.endswith("Abi")
+print(endsWithAbi) #output - True
+
