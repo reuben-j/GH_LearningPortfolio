@@ -45,3 +45,22 @@ print(string4.replace("Hiya", "Cya")) #output Jumb buddy
 #split() function splits the string into substrings where ever a certain separator is present
 string5 = "lets, look, at, the, duck"
 print(string5.split(",")) #output - ['lets', ' look', ' at', ' the', ' duck']
+
+#string concantenation
+str01 = "hiya "
+str02 = "buddy"
+str03 = str01 + str02
+print(str03) #output hiya buddy
+
+# format a string using 'f' before a string then {var name}
+age = 24
+str04 = f"Hi my name is Reuben and I am {age} years old"
+print(str04) #output Hi my name is Reuben and I am 23 years old
+
+#placeholder value allows you to use a floating point decimal 
+price = 59.133143
+str05 = f"this will cost you {price:.2f} dollars"
+print(str05) #output - this will cost you 59.13 dollars
+
+str06 = f"please print 12 * 23 = {12 * 23}"
+print(str06)

@@ -35,6 +35,12 @@ thisDict = {
     "model": "GT",
     "year": 1978
 }
+
+thatDict = {
+    "brand": "Ferrari",
+    "model": "F40",
+    "year": 1980
+}
 print(thisDict) #to print the whole dictionary
 print(thisDict["brand"]) #to print a particular item
 
