@@ -115,3 +115,15 @@ strEnds = "I am looking for Abi"
 endsWithAbi = strEnds.endswith("Abi")
 print(endsWithAbi) #output - True
 
+# string.expandtabs(int) - sets tabsize of specified whitespaces
+strExpand = "So\tma\tny\tsp\tac\tes"
+print(strExpand.expandtabs(2)) #output - So  ma  ny  sp  ac  es
+
+#string.find("substring") - returns location of first occurence of substring. Returns -1 if not found
+strFind = "We are looking for a car!"
+print(strFind.find("car")) #output - 21
+
+# string.format() - formats the specified values and insert them into string placeholder
+strFormat = "You are only {age:.2f} years old?"
+print(strFormat.format(age = 23)) #output - You are only 23.00 years old?
+
