@@ -146,3 +146,8 @@ print(strIsAscii.isascii()) #output True
 # string.isdecimal() returns True is all characters are decimal (0-9)
 strIsDecimal = "12345566789"
 print(strIsDecimal.isdecimal()) #output - True
+
+# string.isdigit() return True is all characters are digits
+strIsDigit = "690690"
+print(strIsDigit.isdigit()) #output - True
+
