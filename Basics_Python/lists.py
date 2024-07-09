@@ -39,3 +39,18 @@ print(list1[:5]) # [0, 1, 2, 3, 4]
 #without an end value, it will print to end
 print(list1[5:]) # [5, 6, 7, 8, 9]
 
+#change list items
+list2 = [123, 234, 345, 456]
+list2[0] = "Reuben"
+print(list2) #['Reuben', 234, 345, 456]
+
+#change a range of items
+list2[0:2] = ["Abigail", "Marcus"]
+print(list2) #['Abigail', 'Marcus', 234, 345, 456]
+
+# if you insert too many new values compared to the range, these will be added at the specified point, followed by the rest of the existing values
+list2[0:1] = ["Jordan", "Tommi", "Iris", "Jon"]
+print(list2) #['Jordan', 'Tommi', 'Iris', 'Jon', 'Marcus', 345, 456]
+
+
+
