@@ -92,3 +92,35 @@ print(listNew) # [2, 3, 'Abi', 'Marcus', True, False, True]
 del listNew[0]
 print(listNew) #[3, 'Abi', 'Marcus', True, False, True]
 
+# del list - will delete the entire contents of the list
+del listNew
+#!  print(listNew) this throws an error because there is no list anymore
+
+list4 = ["I", "love", "beef"]
+list4.clear()
+print(list4) # [] <- list is empty 
+
+# loop through a list
+thisList = ["Porsche", "go", "very", "fast"]
+for x in thisList:
+    print(x) # Porsche \n go \n very \n fast
+
+numList = [1, 2, 3, 4, 5]
+
+# loop through the list by referring to their index numbers
+for i in range(len(numList)):
+    numList[i] *= 2
+print(numList) #[2, 4, 6, 8, 10]
+
+#loop through a list with a while loop
+i = 0
+while i < len(numList):
+    print(numList[i])
+    i += 1
+# 2 \n 4 \n 6 \n 8 \n 10
+
+#using list comprehension is the easiest way to print items in list
+[print(x) for x in numList] # 2 \n 4 \n 6 \n 8 \n 10
+
+# list comprehension
+
