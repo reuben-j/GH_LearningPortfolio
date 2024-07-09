@@ -240,3 +240,27 @@ print(strRJusted)  #         LetsGoRight
 strRPartition = "We are looking for chickens and chickens yep thanks!"
 rPartitionTuple = strRPartition.rpartition("chickens")
 print(rPartitionTuple) # ('We are looking for chickens and ', 'chickens', ' yep thanks!')
+
+# string.splitlines() returns a list where each line is a list item
+strSplitLines = "This is one line\nThis is another\nThis is the last"
+strLinesSplit = strSplitLines.splitlines()
+print(strLinesSplit) #['This is one line', 'This is another', 'This is the last']
+
+# string.startswith(target word) returns True if string starts with target substring
+strStartsWith = "Yellow is the word we are looking for"
+print(strStartsWith.startswith("Yellow")) #True
+
+# string.swapcase() swaps the case from upper to lower and vica versa
+strSwapCases = "lowtOHIGH"
+strCasesSwapped = strSwapCases.swapcase()
+print(strCasesSwapped) # LOWTohigh
+
+# string.title() converts the first letter of each string to a capital. making it a title
+strTitleFunc = "turn this to a title please"
+strTurnedTitle = strTitleFunc.title()
+print(strTurnedTitle) #Turn This To A Title Please
+
+# string.zfill(amount) fills string from start with zeros until string is specified amount long
+strZFill = "Fill This"
+strZFilled = strZFill.zfill(15)
+print(strZFilled) #000000Fill This
