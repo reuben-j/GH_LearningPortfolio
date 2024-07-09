@@ -151,3 +151,7 @@ print(strIsDecimal.isdecimal()) #output - True
 strIsDigit = "690690"
 print(strIsDigit.isdigit()) #output - True
 
+# string.isidentifier() - return true if string is considered an identifier
+# an identifier is considered to have letters A-Z, nums 0-9 and/or underscores. An identifier cannot start with a number or contain spaces
+strIdentifier = "myFirstPythonFile_py"
+print(strIdentifier.isidentifier()) #true
