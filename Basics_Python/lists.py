@@ -52,5 +52,23 @@ print(list2) #['Abigail', 'Marcus', 234, 345, 456]
 list2[0:1] = ["Jordan", "Tommi", "Iris", "Jon"]
 print(list2) #['Jordan', 'Tommi', 'Iris', 'Jon', 'Marcus', 345, 456]
 
+# if you insert less items than the range states, the new value will take the specified range and
+# the remaining items will move accordingly
+list2[0:3] = ["Reuben"]
+print(list2)
 
+# list.insert(index, value) - to insert a new value without replacing an existing one, and to add it at a certain index
+list3 = ["apple", "banana", "watermelon"]
+list3.insert(0, "pineapple")
+print(list3) #['pineapple', 'apple', 'banana', 'watermelon'].
 
+# list.append(value) - to append a new value to the end of the list
+list3.append("orange")
+print(list3) #['pineapple', 'apple', 'banana', 'watermelon', 'orange']
+
+# to join two lists together, use the extend function
+# list.extend(list2)
+listNew = [1, 2, 3]
+listNew2 = ["Reuben", "Abi", "Marcus"]
+listNew.extend(listNew2)
+print(listNew) #[1, 2, 3, 'Reuben', 'Abi', 'Marcus']
