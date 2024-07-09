@@ -142,3 +142,21 @@ print(newList) #['apple', 'oranges', 'grape']
 
 newList = [x for x in fruits if "p" in x]
 print(newList) #['apple', 'grape']
+
+#does not need the if statement
+newList = [x for x in fruits]
+print(newList) # ['apple', 'oranges', 'melon', 'grape', 'fish']
+
+# what you iterate through can be anything
+
+#return max number from list
+intList = [1, 23, 31, 4, 52, 6, 7]
+intmax = 0
+for x in intList:
+    if x > intmax:
+        intmax = x
+    else:
+        continue
+        
+print(intmax)
+    
