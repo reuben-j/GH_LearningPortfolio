@@ -39,3 +39,28 @@ else:
 # isinstance(var, type) returns true if the target variable is the same type as the target type
 num3 = 100
 print(isinstance(num3, str)) #false because num3 is not a string
+
+#Python arithmetic operators
+int1 = 10
+int2 = 5
+
+# +
+print(int1 + int2) # 15
+
+# -
+print(int1 - int2) # 5
+
+# * 
+print(int1 * int2) # 50
+
+# /
+print(int1 / int2) # 2.0
+
+# %
+print(int1 % int2) # 0 
+
+# **
+print(int1 ** int2) #100,000, 10 to the power of 5
+
+#- // floor division
+print(int1 // 3) # 3, rounds result of division to nearet integer
