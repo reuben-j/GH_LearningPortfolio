@@ -122,5 +122,23 @@ while i < len(numList):
 #using list comprehension is the easiest way to print items in list
 [print(x) for x in numList] # 2 \n 4 \n 6 \n 8 \n 10
 
-# list comprehension
+# list comprehension offers a shorter syntax to create a new list based on values of existing list
+# below shows creating a new list from existing list with fruit containing the letter 'a'
+fruits = ["apple", "oranges", "melon", "grape", "fish"]
+newList = []
 
+#this shows the old fashioned way
+for x in fruits:
+    if "a" in x:
+        newList.append(x)
+    
+
+#this shows with list comprehension
+newList = [x for x in fruits if "a" in x]
+print(newList) #['apple', 'oranges', 'grape']
+
+# the syntax
+#* newList = [expression for item in iterable if condition == true]
+
+newList = [x for x in fruits if "p" in x]
+print(newList) #['apple', 'grape']
