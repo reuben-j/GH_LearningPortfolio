@@ -50,7 +50,7 @@ print(int1 + int2) # 15
 # -
 print(int1 - int2) # 5
 
-# * 
+#- * 
 print(int1 * int2) # 50
 
 # /
@@ -59,7 +59,7 @@ print(int1 / int2) # 2.0
 # %
 print(int1 % int2) # 0 
 
-# **
+#- **
 print(int1 ** int2) #100,000, 10 to the power of 5
 
 #- // floor division
