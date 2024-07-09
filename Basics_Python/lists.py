@@ -72,3 +72,23 @@ listNew = [1, 2, 3]
 listNew2 = ["Reuben", "Abi", "Marcus"]
 listNew.extend(listNew2)
 print(listNew) #[1, 2, 3, 'Reuben', 'Abi', 'Marcus']
+
+# .extend() can also append any iterable object such as a tuple, set, dictionary etc.
+tuple1 = (True, False, True)
+listNew.extend(tuple1)
+print(listNew) #[1, 2, 3, 'Reuben', 'Abi', 'Marcus', True, False, True]
+
+# list.remove() removes the specified value from the list
+listNew.remove("Reuben")
+print(listNew) # [1, 2, 3, 'Abi', 'Marcus', True, False, True]
+# if there are multiple values of the same value, it will remove the first one it reaches from the left
+
+# list.pop(index) removes the specific index from the list
+listNew.pop(0)
+print(listNew) # [2, 3, 'Abi', 'Marcus', True, False, True]
+# if now index is provided in pop(), it will remove the last item of the list
+
+# del list[index] also removes value of target index
+del listNew[0]
+print(listNew) #[3, 'Abi', 'Marcus', True, False, True]
+
