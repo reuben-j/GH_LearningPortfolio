@@ -214,6 +214,7 @@ myTable = strTrans.maketrans(x, y)
 print(strTrans.translate(myTable)) #output I aope tais stays tae same!
 
 # string.partition(target string) - return a tuple where you receive the preceding strings, the target string alone in the middle and the proceding strings
+# this func splits the string at the first occurence of the target word
 strPartition = "I love my wife abi!"
 parted = strPartition.partition("my")
 print(parted) # ('I love ', 'my', ' wife abi!')
@@ -229,3 +230,13 @@ strFind = "I am looking for Reuben the nerd Reuben"
 findInt = strFind.rfind("Reuben", 30, 40)
 print(findInt) #33 <- index
  
+ # string.rjust(int, "fill character") Returns a string that is adjusted right to the specified amount with the specified filling char
+strRJust = "LetsGoRight"
+strRJusted = strRJust.rjust(20, " ")
+print(strRJusted)  #         LetsGoRight
+
+# string.rpartition("target word") Returns a tuple where the middle of the tuple is the last occurence of the target word, the first part of the tuple
+# is the preceding strings, and the last part of the tuples is what follows the target word
+strRPartition = "We are looking for chickens and chickens yep thanks!"
+rPartitionTuple = strRPartition.rpartition("chickens")
+print(rPartitionTuple) # ('We are looking for chickens and ', 'chickens', ' yep thanks!')
