@@ -46,6 +46,53 @@ vector<vector<char>> gameBoardPrint(vector<vector<char>> gameBoard) {
     return gameBoard;
 }
 
+bool gameWon(vector<vector<char>> gameBoard, char player1, char player2) {
+    if(gameBoard[0][0] == player1 && gameBoard[0][2] == player1 && gameBoard[0][4] == player1) {
+        return true;
+    } else if(gameBoard[0][0] == player2 && gameBoard[0][2] == player2 && gameBoard[0][4] == player2) {
+        return true;
+    }
+    else if(gameBoard[2][0] == player1 && gameBoard[2][2] == player1 && gameBoard[2][4] == player1) {
+        return true;
+    } else if(gameBoard[2][0] == player2 && gameBoard[2][2] == player2 && gameBoard[2][4] == player2) {
+        return true;
+    }
+    else if(gameBoard[4][0] == player1 && gameBoard[4][2] == player1 && gameBoard[4][4] == player1) {
+        return true;
+    } else if(gameBoard[4][0] == player2 && gameBoard[4][2] == player2 && gameBoard[4][4] == player2) {
+        return true;
+    }
+    // left to right win conditions for both ^
+    else if(gameBoard[0][0] == player1 && gameBoard[2][0] == player1 && gameBoard[4][0] == player1) {
+        return true;
+    } else if(gameBoard[0][0] == player2 && gameBoard[2][0] == player2 && gameBoard[4][0] == player2) {
+        return true;
+    }
+    else if(gameBoard[0][2] == player1 && gameBoard[2][2] == player1 && gameBoard[4][2] == player1) {
+        return true;
+    } else if(gameBoard[0][2] == player2 && gameBoard[2][2] == player2 && gameBoard[4][2] == player2) {
+        return true;
+    }
+    else if(gameBoard[0][4] == player1 && gameBoard[2][4] == player1 && gameBoard[4][4] == player1) {
+        return true;
+    } else if(gameBoard[0][4] == player2 && gameBoard[2][4] == player2 && gameBoard[4][4] == player2) {
+        return true;
+    }
+    //top to bottom win conditions for both ^
+    else if(gameBoard[0][0] == player1 && gameBoard[2][2] == player1 && gameBoard[4][4] == player1) {
+        return true;
+    } else if(gameBoard[0][0] == player2 && gameBoard[2][2] == player2 && gameBoard[4][4] == player2) {
+        return true;
+    }
+    else if(gameBoard[0][4] == player1 && gameBoard[2][2] == player1 && gameBoard[4][0] == player1) {
+        return true;
+    } else if(gameBoard[0][4] == player2 && gameBoard[2][2] == player2 && gameBoard[4][0] == player2) {
+        return true;
+    }
+    else return false;
+    // diagonal win conditions for both ^
+}
+
 int main() {
     char player1, player2;
     cout << "First player, what character would you like to use? ";
@@ -84,6 +131,10 @@ for(int i = 0; i < 9; i++) {
 
     board[turn1Height][turn1Width] = player;
     gameBoardPrint(board);
+    if(gameWon(board, player1, player2)== true) {
+        cout << "You win " << player << "!!" << endl;
+        break;
+    }
     if(i == 8) {
         cout << "Its a draw!";
         break;
