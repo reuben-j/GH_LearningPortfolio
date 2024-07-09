@@ -155,3 +155,77 @@ print(strIsDigit.isdigit()) #output - True
 # an identifier is considered to have letters A-Z, nums 0-9 and/or underscores. An identifier cannot start with a number or contain spaces
 strIdentifier = "myFirstPythonFile_py"
 print(strIdentifier.isidentifier()) #true
+
+# string.islower() return true is all chars are lowercase
+strLower = "ABCDEFG"
+print(strLower.islower()) #false
+
+# string.isnumeric() return true if all chars are numerical
+strNumeric = "1234567ABDCE"
+print(strNumeric.isnumeric()) #false
+
+# string.isprintable() return true if all chars are printable. Non-printable chars are like \n \t 
+strPrintable = "Hello World"
+print(strPrintable.isprintable()) #true
+
+# string.isspace() return true if all chars are whitespaces
+strWhiteSPace = "    "
+print(strWhiteSPace.isspace()) #true
+
+# string.istitle() return true if string meets title criteria
+# a title has all letters at start of words capitalised and rest of word lower case
+strTitle = "This Is A Title!"
+print(strTitle.istitle()) #true
+
+# string.isupper() return true if all chars are upper case
+strUpper = "asdxcv"
+print(strUpper.isupper()) #false
+
+# "separating char".join(tuple) 
+# join a tuple with the specified joining char
+myTuple = ("Reuben", "Abi", "Marcus")
+strJoin = " ".join(myTuple)
+print(strJoin) # Reuben Abi Marcus
+
+# string.ljust(int)
+# returns a string (int) chars long with the string adjusted to the left
+strLJust = "apple"
+strLJusted = strLJust.ljust(10)
+print(strLJusted, "is so yummy!") # apple      is so yummy!
+
+# string.lower() - returns a string where all chars are lower case
+strUpperToLower = "AHHHH HELP!"
+strNewLower = strUpperToLower.lower()
+print(strNewLower) #ahhhh help!
+
+# string.lstrip() - removes any leading spaces before actual string
+strLStrip = "     Porsche   "
+strLStripped = strLStrip.lstrip()
+print(strLStripped) #Porsche
+
+# string.maketrans("to replace", "to replace with")
+# the to be replaced and to replace with substrings must be the same length
+# use the following to create a table and translate function to piece it together
+# under the hodd, it uses ascii to replace the necessary chars
+strTrans = "I hope this stays the same!"
+x = "h"
+y = "a"
+myTable = strTrans.maketrans(x, y)
+print(strTrans.translate(myTable)) #output I aope tais stays tae same!
+
+# string.partition(target string) - return a tuple where you receive the preceding strings, the target string alone in the middle and the proceding strings
+strPartition = "I love my wife abi!"
+parted = strPartition.partition("my")
+print(parted) # ('I love ', 'my', ' wife abi!')
+
+# string.replace(target string, replacement string)
+strReplace = "I love Porsches"
+strReplaced = strReplace.replace("Porsches", "Audis")
+print(strReplaced) # I love Audis
+
+# string.find(target string, first index, last index) returns index of the last found index of the target string
+# search for the last occurence of the string in the specified index range
+strFind = "I am looking for Reuben the nerd Reuben"
+findInt = strFind.rfind("Reuben", 30, 40)
+print(findInt) #33 <- index
+ 
