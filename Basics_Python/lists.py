@@ -175,3 +175,22 @@ print(thisNumList) #[4, 12, 12, 65, 355, 999, 7945]
 
 thisNumList.sort(reverse=True)
 print(thisNumList) #[7945, 999, 355, 65, 12, 12, 4]
+
+#custom sort function
+def myFunc(n):
+    return abs(n - 50)
+
+# this function returns first numbers closest to 50
+thisNumList.sort(key = myFunc)
+print(thisNumList)
+
+#list sort is case sensitive, use lower to get past this
+thisCapList = ["apple", "Banana", "chicken", "Dill"]
+
+#this shows it sorted with capitals still counted
+thisCapList.sort()
+print(thisCapList) #['Banana', 'Dill', 'apple', 'chicken']
+
+#this is with capitals sorted appropriately
+thisCapList.sort(key=str.lower)
+print(thisCapList) #['apple', 'Banana', 'chicken', 'Dill']
