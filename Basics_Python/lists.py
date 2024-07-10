@@ -198,3 +198,42 @@ print(thisCapList) #['apple', 'Banana', 'chicken', 'Dill']
 # list.reverse() reverse the current order of the list
 thisCapList.reverse()
 print(thisCapList) #['Dill', 'chicken', 'Banana', 'apple']
+
+#copy lists
+list01 = [213, 421, 941, 123]
+list02 = list01.copy()
+
+print(list02) #[213, 421, 941, 123]
+
+# use the list(otherList) method to copy across list
+list03 = list(list02)
+print(list03) #[213, 421, 941, 123]
+
+#join two lists with '+' operator
+list04 = [12, 21, 23, 32]
+list05 = ["apple", "banana", "cherry"]
+list06 = list04 + list05
+print(list06) # [12, 21, 23, 32, 'apple', 'banana', 'cherry']
+
+#join two lists with the list.append(otherList) method
+for x in list04:
+    list05.append(x)
+print(list05) #['apple', 'banana', 'cherry', 12, 21, 23, 32]
+
+#extend method to add to end of the list
+list07 = [True, False]
+list08 = [1, 0]
+list07.extend(list08)
+print(list07) #[True, False, 1, 0]
+
+#! list methods
+
+# list.count("target") returns the amount of specified list component
+list101 = [12, 23, 34, 12, 23, 34, 12]
+num = list101.count(12)
+print(num) #3
+
+# list.index("target") returns the index of the first occurence of the target list item
+list102 = ["apple", "banana", "apple", "cherry"]
+print(list102.index("apple")) # 0
+
