@@ -194,3 +194,7 @@ print(thisCapList) #['Banana', 'Dill', 'apple', 'chicken']
 #this is with capitals sorted appropriately
 thisCapList.sort(key=str.lower)
 print(thisCapList) #['apple', 'Banana', 'chicken', 'Dill']
+
+# list.reverse() reverse the current order of the list
+thisCapList.reverse()
+print(thisCapList) #['Dill', 'chicken', 'Banana', 'apple']
