@@ -2,6 +2,22 @@
 # tuples are written with round brackest
 # tuple items are ordered, unchangeable, and allow duplicate values.
 
+myTuple = (12, 23, 34, 12)
+# allows for dupliates:
+print(myTuple) #(12, 23, 34, 12)
 
-myTuple = (12, 23, 34)
-print(myTuple)
+# len(tuple) returns length of the tuple
+print(len(myTuple)) #4
+
+# to create a tuple with a single item, you must use a comma after the item other
+# wise it will not be recognised
+singleTuple = ("Reuben",)
+otherTuple = ("Reuben")
+print(type(singleTuple)) # <class 'tuple'>
+print(type(otherTuple)) # <class 'str'>
+
+# tuples can contain multiple types of variables inside a single tuple
+mixedTuple = ("Reuben", 24, True, 'A')
+print(mixedTuple) # ('Reuben', 24, True, 'A')
+
+#
