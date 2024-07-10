@@ -160,3 +160,18 @@ for x in intList:
         
 print(intmax)
     
+#list sorting
+thisStrList = ["chicken", "beef", "lamb", "blueberries", "butter"]
+thisStrList.sort()
+print(thisStrList) #['beef', 'blueberries', 'butter', 'chicken', 'lamb']
+
+#to sort in reverse alphabetically
+thisStrList.sort(reverse=True)
+print(thisStrList) #['lamb', 'chicken', 'butter', 'blueberries', 'beef']
+
+thisNumList = [12, 65, 7945, 12, 355, 4, 999]
+thisNumList.sort()
+print(thisNumList) #[4, 12, 12, 65, 355, 999, 7945]
+
+thisNumList.sort(reverse=True)
+print(thisNumList) #[7945, 999, 355, 65, 12, 12, 4]
