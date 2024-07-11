@@ -49,3 +49,15 @@ tuple4 = (21, 32, 43, 54)
 tuple5 = ("Me", "You", "them")
 tuple4 += tuple5
 print(tuple4) #(21, 32, 43, 54, 'Me', 'You', 'them')
+
+# you can remove value from tuple by the list workaround
+tuple6 = (21, 12, 43, 34, 54, 56)
+list3 = list(tuple6)
+list3.remove(21)
+tuple6 = tuple(list3)
+print(tuple6) #(12, 43, 34, 54, 56)
+
+# del keyword deletes the tuple entirely
+byeTuple = (1,)
+del byeTuple
+#!  print(byeTuple) throws error because it doesnt exist
