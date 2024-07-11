@@ -20,4 +20,10 @@ print(type(otherTuple)) # <class 'str'>
 mixedTuple = ("Reuben", 24, True, 'A')
 print(mixedTuple) # ('Reuben', 24, True, 'A')
 
-#
+#tuples can be created using the tuple creator 
+newTuple = tuple((12, 23, 34, 45))
+print(type(newTuple), newTuple) # <class 'tuple'> (12, 23, 34, 45)
+
+#access tuple specifically with range index
+tuple1 = (123, 234, 345, 456, 456, 567, 567, 678, 678)
+print(tuple1[3:]) #(456, 456, 567, 567, 678, 678)
