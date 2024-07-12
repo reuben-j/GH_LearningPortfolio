@@ -61,3 +61,22 @@ print(tuple6) #(12, 43, 34, 54, 56)
 byeTuple = (1,)
 del byeTuple
 #!  print(byeTuple) throws error because it doesnt exist
+
+#packing and unpacking a tuple
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green) # apple
+
+# when you have less variables than values, use an asterisk to hold the rest of the values
+cars = ("ford", "porsche", "lambo", "ferrari", "dodge")
+(ford, porsche, *others) = cars
+print(ford) #ford
+print(porsche) #porsche
+print(others) # ["lambo", "ferrari", "dodge"]
+
+# the asterisk method can be used in the middle of variable declaration also
+nums = (1, 2, 3, 4, 5, 6, 7)
+(smallest, *middleNums, biggest) = nums
+print(smallest) # 1
+print(middleNums) # 2, 3, 4, 5, 6
+print(biggest) #7
