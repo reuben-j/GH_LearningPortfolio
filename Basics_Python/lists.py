@@ -237,3 +237,7 @@ print(num) #3
 list102 = ["apple", "banana", "apple", "cherry"]
 print(list102.index("apple")) # 0
 
+# to find the max and min numbers of a list
+mynewlist = [12, 21, 214, 13, 41, 84, 1239]
+print(max(mynewlist)) #1239
+print(min(mynewlist)) #12
