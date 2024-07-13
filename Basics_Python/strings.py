@@ -264,3 +264,8 @@ print(strTurnedTitle) #Turn This To A Title Please
 strZFill = "Fill This"
 strZFilled = strZFill.zfill(15)
 print(strZFilled) #000000Fill This
+
+# eval()
+# if a string in python could also be a legal line of code, use the eval method to run it from a string
+myStr = "print('happy')"
+eval(myStr) #happy
