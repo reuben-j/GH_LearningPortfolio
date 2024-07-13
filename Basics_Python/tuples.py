@@ -80,3 +80,8 @@ nums = (1, 2, 3, 4, 5, 6, 7)
 print(smallest) # 1
 print(middleNums) # 2, 3, 4, 5, 6
 print(biggest) #7
+
+# loop tuples
+tupleLoop = (1, 2, 3, 4, 5)
+for x in tupleLoop:
+    print(x) # 1 2 3 4 5
