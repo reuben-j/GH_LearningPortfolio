@@ -85,3 +85,9 @@ print(biggest) #7
 tupleLoop = (1, 2, 3, 4, 5)
 for x in tupleLoop:
     print(x) # 1 2 3 4 5
+    
+#multiply tuples
+tupleMult = ("apples", "banana")
+tupleNewMult = 2 * tupleMult
+print(tupleNewMult) #('apples', 'banana', 'apples', 'banana')
+ 
