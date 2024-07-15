@@ -90,4 +90,7 @@ for x in tupleLoop:
 tupleMult = ("apples", "banana")
 tupleNewMult = 2 * tupleMult
 print(tupleNewMult) #('apples', 'banana', 'apples', 'banana')
- 
+
+#tuple.count(target var) returns int of how many occurences of target are in tuple
+countingTuple = (12, 31, 31, 145, 93, 8, 21, 31)
+print(countingTuple.count(31)) #3
