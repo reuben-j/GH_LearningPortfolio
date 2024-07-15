@@ -94,3 +94,7 @@ print(tupleNewMult) #('apples', 'banana', 'apples', 'banana')
 #tuple.count(target var) returns int of how many occurences of target are in tuple
 countingTuple = (12, 31, 31, 145, 93, 8, 21, 31)
 print(countingTuple.count(31)) #3
+
+# tuple.index(target) returns an index of the first occurence of the target value
+indexTuple = ("A", "B", "C", "D")
+print(indexTuple.index("B")) #1
