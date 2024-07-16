@@ -1,0 +1,1 @@
+# sets are a collection of values that are unordered, unchangeable and unindexed
