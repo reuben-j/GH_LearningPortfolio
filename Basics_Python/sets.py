@@ -68,3 +68,17 @@ popped = mySet07.pop()
 print(popped) # will return a different random item from mySet07 each time it is ran
 print(mySet07) # will return the remaning three items that still exist in set
 
+#set.clear() empties set of items
+mySet08 = {True, False, 123, 234}
+mySet08.clear()
+print(mySet08) #set()
+
+# del set - deletes the set entirely
+del mySet08
+#! print(mySet08) throws an error because it no longer exists
+
+#loop through set with for loop
+mySet09 = {"Ford", "Lambo", "Maserati", "Porsche"}
+for x in mySet09:
+    print(x) # Ford Lambo Maserati Porsche
+
