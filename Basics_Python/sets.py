@@ -62,4 +62,9 @@ print(mySet06) #{34, 234, 12, 23, 345}
 mySet06.discard(3400)
 print(mySet06) # {34, 234, 12, 23, 345}
 
+# set.pop() method will return a item from set picked from random to be removed from the set
+mySet07 = {"Reuben", "Jordan", "Marcus", "Tommi"}
+popped = mySet07.pop()
+print(popped) # will return a different random item from mySet07 each time it is ran
+print(mySet07) # will return the remaning three items that still exist in set
 
