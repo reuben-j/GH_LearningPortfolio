@@ -132,3 +132,19 @@ print(TheSet8) #{'Human', 'Fish'}
 TheSet9 = TheSet6 - TheSet7
 print(TheSet9) #{'Human', 'Fish'}
 
+# set.difference_update(set2) will update the first set to include only items that are not present in set 2
+ThisSet1 = {12, 23, 34, 45, 56}
+ThisSet2 = {21, 32, 34, 45, 76}
+ThisSet1.difference_update(ThisSet2)
+print(ThisSet1) #{12, 23, 56}
+
+# set.symmetric_difference(set2) will return a new set with only items that are not present in both sets
+ThisSet3 = {556, 762, 9, 10, 45}
+ThisSet4 = {556, 123, 9, 10, 122}
+ThisSet5 = ThisSet3.symmetric_difference(ThisSet4)
+print(ThisSet5) #{762, 123, 45, 122}
+
+# using the '^' operator has the same effect as the symmetric_difference() method
+ThisSet6 = ThisSet3 ^ ThisSet4
+print(ThisSet6) #{762, 123, 45, 122}
+
