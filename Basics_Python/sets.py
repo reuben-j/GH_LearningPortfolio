@@ -116,3 +116,19 @@ TheSet2 = {10, 762, 45}
 TheSet3 = TheSet1 & TheSet2
 print(TheSet3) # {762}
 
+# set.intersection_update will update the existing set to only including the duplicates with the specified other set
+TheSet4 = {"Dog", "Cat", "Fish"}
+TheSet5 = {"Mouse", "Bird", "Fish"}
+TheSet4.intersection_update(TheSet5)
+print(TheSet4) #{'Fish'}
+
+#set.difference(set2) will return a new set that contains items present in only the first set that are not duplicated in the second set
+TheSet6 = {"Human", "Monkey", "Fish", "Chimp"}
+TheSet7 = {"Cat", "Dog", "Monkey", "Chimp"}
+TheSet8 = TheSet6.difference(TheSet7)
+print(TheSet8) #{'Human', 'Fish'}
+
+# using the '-' operator has the same effect as the difference method
+TheSet9 = TheSet6 - TheSet7
+print(TheSet9) #{'Human', 'Fish'}
+
