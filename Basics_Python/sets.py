@@ -97,3 +97,22 @@ print(NewSet4) # {'Lambo', 'Marcus', 'Porsche', 'Reuben', 'Tommi', 'Ford', 12, '
 newList = ["Hey", "Whatup", "Dude"]
 NewSet5 = NewSet1.union(newList) 
 print(NewSet5) #{'Dude', 'Hey', 234, 345, 123, 'Whatup'}
+
+# set.update() adds one set to another, not creating a new set just updating the first one
+NewSet6 = {True, False, 12}
+NewSet7 = {False, True, 23}
+NewSet6.update(NewSet7)
+print(NewSet6) #{False, True, 23, 12}
+
+# set.intersection() method will gather duplicates from two sets and place them into new set
+NewSet8 = {"Reuben", "Abi", "Marcus"}
+NewSet9 = {"Jordan", "Abi", "Tommi"}
+NewSet10 = NewSet8.intersection(NewSet9)
+print(NewSet10) # {'Abi'} 
+
+#using the '&' operator will have the same effect as the intersection method
+TheSet1 = {556, 762, 9}
+TheSet2 = {10, 762, 45}
+TheSet3 = TheSet1 & TheSet2
+print(TheSet3) # {762}
+
