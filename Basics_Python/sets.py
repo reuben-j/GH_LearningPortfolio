@@ -42,3 +42,24 @@ mySet05 = {"Reuben", "Abi", "Marcus"}
 mySet05.add("Iris")
 print(mySet05) #{'Abi', 'Iris', 'Marcus', 'Reuben'}
 
+#set.update(set2) to add one set to another
+mySet05.update(mySet04)
+print(mySet05) #{'Reuben', 34, 'Marcus', 12, 'Abi', 45, 23, 'Iris'}
+
+#the use of the set.update() method is not limited to sets
+myList = [12, 23, 34]
+mySet06 = {123, 234, 345}
+mySet06.update(myList)
+print(mySet06) #{34, 456, 234, 12, 45, 23, 345, 123}
+
+# set.remove(var) to remove specific items from set
+if 123 in mySet06:
+    mySet06.remove(123)
+print(mySet06) #{34, 234, 12, 23, 345}
+# if the specified item in remove does not exist, an error will be thrown
+
+#set.discard(var) will remove item from set, but will not throw error if item doesnt exist in list
+mySet06.discard(3400)
+print(mySet06) # {34, 234, 12, 23, 345}
+
+
