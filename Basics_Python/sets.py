@@ -148,3 +148,8 @@ print(ThisSet5) #{762, 123, 45, 122}
 ThisSet6 = ThisSet3 ^ ThisSet4
 print(ThisSet6) #{762, 123, 45, 122}
 
+# set.symmetric_difference_update will update the existing list with items not present in both sets
+Set1 = {123, 321, 432, 234}
+Set2 = {123, 321, 345, 543}
+Set1.symmetric_difference_update(Set2)
+print(Set1) #{432, 345, 234, 543}
