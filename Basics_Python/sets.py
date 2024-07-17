@@ -82,3 +82,18 @@ mySet09 = {"Ford", "Lambo", "Maserati", "Porsche"}
 for x in mySet09:
     print(x) # Ford Lambo Maserati Porsche
 
+# set1.union(set2) returns a new set with all items from both sets
+NewSet1 = {123, 234, 345}
+NewSet2 = {321, 432, 543}
+NewSet3 = NewSet1.union(NewSet2)
+print(NewSet3) #{432, 321, 345, 234, 123, 543}
+
+# the use of the | operator has the same effect of set.union(set2)
+# you can join as many sets as you like
+NewSet4 = mySet07 | mySet09 | mySet01
+print(NewSet4) # {'Lambo', 'Marcus', 'Porsche', 'Reuben', 'Tommi', 'Ford', 12, 'Maserati', 123}
+
+# you can use the union method or to combine sets with lists, tuples etc
+newList = ["Hey", "Whatup", "Dude"]
+NewSet5 = NewSet1.union(newList) 
+print(NewSet5) #{'Dude', 'Hey', 234, 345, 123, 'Whatup'}
