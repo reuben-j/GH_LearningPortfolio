@@ -98,3 +98,5 @@ print(countingTuple.count(31)) #3
 # tuple.index(target) returns an index of the first occurence of the target value
 indexTuple = ("A", "B", "C", "D")
 print(indexTuple.index("B")) #1
+
+# test commit from ipad
