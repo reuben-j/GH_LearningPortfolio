@@ -138,3 +138,20 @@ for x, obj in dictOfRelations.items():
 # person2
 # name: Reuben
 # role: Paramedic
+
+# dictionary methods:
+
+# dict.clear()
+dictToClear = {
+    "me" : "Reuben",
+    "you" : "Abi"
+}
+dictToClear.clear()
+print(dictToClear) # {}
+
+# dict.fromkeys() will create a dictionary with three keys all with the same value of 10
+x = ('key1', 'key2', 'key3')
+y = 10
+dictKeys = dict.fromkeys(x, y)
+print(dictKeys) # {'key1': 10, 'key2': 10, 'key3': 10}
+
