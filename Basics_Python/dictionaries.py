@@ -105,3 +105,36 @@ myFamily = {
 print(myFamily["Reuben"]["age"]) #24
 print(myFamily["Jordan"]["car"]) #Tiguan
 
+# you can chose to create unlimited dictionaries, but then create a final dictionary to 
+# hold the ones you already made
+
+person1 = {
+    "name": "Abi",
+    "role": "Nurse"
+}
+
+person2 = {
+    "name": "Reuben",
+    "role": "Paramedic"
+}
+
+dictOfRelations = {
+    "person1" : person1,
+    "person2" : person2
+}
+
+print(dictOfRelations["person1"]["role"]) # Nurse
+
+# loop through keys and values of all nested dictionaries
+for x, obj in dictOfRelations.items():
+    print(x)
+    
+    for y in obj:
+        print(y + ":", obj[y])
+        
+# person1
+# name: Abi
+# role: Nurse
+# person2
+# name: Reuben
+# role: Paramedic
