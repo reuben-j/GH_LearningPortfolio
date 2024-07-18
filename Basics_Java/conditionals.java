@@ -63,5 +63,22 @@ public class conditionals {
         for (int I : array) {
             System.out.println(I); // 12 23 34 45
         }
+
+        //arrays
+        String cars[] = {"VW", "Peugoet", "Audi"};
+        System.out.println(cars[0]); // VW
+
+        // multi dimensional arrays
+        int matrix[][] = {{12, 23}, {34, 45}};
+        System.out.println(matrix[0][1]); //23
+
+        // for each loop through multidimensional array
+        for (int[] row : matrix) {
+            for (int l : row) {
+                System.out.println(l); //12 23 34 45
+            }
+        }
+
+        
     }
 }
