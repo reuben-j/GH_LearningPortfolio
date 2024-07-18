@@ -9,5 +9,26 @@ public class conditionals {
         } else {
             System.out.println("Num2 is smaller than num");
         }
+
+        // shorthand if else statement, same as cpp
+        String result = (num > num2) ? "Num bigger" : "Num smaller";
+        System.out.println(result); //num bigger
+
+        // switch statements
+        int age = 24;
+        switch (age) {
+            case 23:
+                System.out.println("He is 23!");
+                break;
+            case 24:
+                System.out.println("He is 24!"); // this one is printed
+                break;
+            default:
+                System.out.println("He is another age!");
+        }
+
+
+
+
     }
 }
