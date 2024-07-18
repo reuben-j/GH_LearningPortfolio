@@ -14,7 +14,19 @@ public class test{ // class name must always match filename
         letter = 'A';
         System.out.println(letter); // A
 
+        final int age = 24; // use final in place of const, unchangeable value
+        System.out.println(age); // 24
 
+        float flt = 3.234f;
+        System.out.println(flt); // 3.234
+
+        boolean codingYes = true;
+        System.out.println(codingYes); // true
+
+        String fname = "Reuben";
+        String sname = "Jarvela";
+        String fullName = fname + " " + sname;
+        System.out.println(fullName); // Reuben Jarvela
     }
 }
 
