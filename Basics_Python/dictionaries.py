@@ -73,4 +73,35 @@ for x in newDict.values():
 for x in newDict.keys():
     print(x) # will print all keys
     
+# to loop through both keys and values:
+for x, y in newDict.items():
+    print(x, y) 
+    # brand Peugoet
+    # model 308
+    # year 2008
     
+# to copy one dict to another 
+newestDict = newDict.copy()
+print(newestDict) #{'brand': 'Peugoet', 'model': '308', 'year': 2008}
+
+newNewestNewDict = dict(newDict)
+print(newNewestNewDict) # {'brand': 'Peugoet', 'model': '308', 'year': 2008}
+
+# create a nested dictionary, one dictionary that holds three dicionaries
+myFamily = {
+    "Reuben": {
+        "age": 24,
+        "car": "Peugoet"
+    },
+    "Jordan": {
+        "age": 25,
+        "car": "Tiguan"
+    },
+    "Tommi": {
+        "age": 23,
+        "car": "Amarok"
+    }
+}
+print(myFamily["Reuben"]["age"]) #24
+print(myFamily["Jordan"]["car"]) #Tiguan
+
