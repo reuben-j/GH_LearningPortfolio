@@ -1,4 +1,4 @@
-public class test{ // class name must always match filename
+public class syntaxAndVariabes{ // class name must always match filename
     public static void main(String[] args) { // any code inside main will be executed. Main must be included in every program
         System.out.print("Hello world!\n"); // print to console
         System.out.println("Test"); // using print over println will mean a new line is not added after line is printed
