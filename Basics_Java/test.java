@@ -25,8 +25,19 @@ public class test{ // class name must always match filename
 
         String fname = "Reuben";
         String sname = "Jarvela";
-        String fullName = fname + " " + sname;
+        String fullName = fname + " " + sname; // join strings with '+'
         System.out.println(fullName); // Reuben Jarvela
+
+        // declare multiple variables at once
+        int x = 12, y = 15, z = 20;
+        System.out.println(x + y + z); //47
+
+        // one value to multiple variables
+        int a, b, c;
+        a = b = c = 15;
+        System.out.println(a + b + c); //45
+
+        //other data types:
     }
 }
 
