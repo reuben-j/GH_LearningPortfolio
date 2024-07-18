@@ -155,3 +155,11 @@ y = 10
 dictKeys = dict.fromkeys(x, y)
 print(dictKeys) # {'key1': 10, 'key2': 10, 'key3': 10}
 
+# use dict.defauly(key, value) to have a default value set within a dictionary. If not set, it will be called automatically.
+DictDefault = {
+    "brand": "ford",
+    "model" : "GT"
+}
+x = DictDefault.setdefault("model", "mustang") 
+print(x) #GT
+print(DictDefault) # {'brand': 'ford', 'model': 'GT'}
