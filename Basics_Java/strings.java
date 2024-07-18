@@ -27,6 +27,10 @@ public class strings {
         String str5 = str3.concat(str4);
         System.out.println(str5); // Watch out buddy!
 
-        
+        // using '+' operator means the int is as added as a string
+        int myInt = 12;
+        String myString = "00";
+        String myNewString = myInt + myString;
+        System.out.println(myNewString); //1200
     }
 }
