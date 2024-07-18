@@ -37,7 +37,53 @@ public class test{ // class name must always match filename
         a = b = c = 15;
         System.out.println(a + b + c); //45
 
-        //other data types:
+        // primitive data types:
+        // byte, size of 1 byte, can store whole numbers from -128 to 127
+        byte newByte = 23;
+        
+        // short, size of 3 bytes, can store whole numbers from -32,768 to 32,767
+        short newShort = 31001;
+
+        // int, size of 4 bytes, can store whole numbers from -2,147,483,648 to 2,147,483,647
+        int newInt = 1233456;
+
+        // long, size of 8 bytes, stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+        long newLong = 1421431353L;
+
+        //float, size of 4 bytes, sufficient for storing 6 to 7 decimal digits
+        float newFloat = 3.142f;
+
+        // double, size of 8 bytes, Sufficient for storing 15 decimal digits
+        double newDouble = 3.1415926538979d;
+
+        // boolean, size of 1 byte, holds true or false
+        boolean newBool = true;
+
+        // char, size of 2 bytes, stores a single letter or ascii value
+        char newChar = '&';
+
+        System.out.println(newByte + newShort + newInt + newLong + newFloat + newDouble); //1.4226958111415927E9
+        System.out.println(newBool); //true
+        System.out.println(newChar); // &
+
+        // type casting, if value goes to a variable that is a larger size, it is automatic
+        // known as widening casting
+        byte myByte = 12;
+        int myInt = myByte;
+        System.out.println(myByte + myInt); //24
+
+        // if the values goes to a var that is smaller in byte size, it must be done manually
+        // known as narrowing casting
+        double myDouble = 1234.56d;
+        int myNewInt = (int) myDouble;
+
+        System.out.println(myDouble); // 1234.56
+        System.out.println(myNewInt); // 1234
+
+        // e.g percentages
+        int myScore = 78;
+        float percent = (float) myScore / 100 * 100.00f;
+        System.out.println(percent); // 78.0
     }
 }
 
