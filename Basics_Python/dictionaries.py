@@ -41,3 +41,36 @@ print(thatDict.get("favFood")) #Chocolate
 # dict.pop(key) to remove a specific item
 thatDict.pop("height")
 #! print(thatDict["height"]) throws error because it no longer exists
+
+# dict.popitem() removes the last inserted item
+thatDict.popitem()
+print(thatDict.keys()) #dict_keys(['name', 'age', 'language']) <- favFood was popped and no longer present
+
+# use the 'del' keyword to delete the pair or the entire dictionary
+del thatDict["age"]
+print(thatDict.get("age")) #none
+
+#* del thatDict
+#! print(thatDict) throws error as it no longer exists
+
+# dict.clear() method clears the dictionaries
+thatDict.clear()
+print(thatDict) #{}
+
+# to loop through a dictionary
+newDict = {
+    "brand": "Peugoet",
+    "model": "308",
+    "year": 2008
+}
+
+for x in newDict:
+    print(x)  # will print all keys
+    print(newDict[x]) # will print all values
+    
+for x in newDict.values():
+    print(x) # will print all values
+for x in newDict.keys():
+    print(x) # will print all keys
+    
+    
