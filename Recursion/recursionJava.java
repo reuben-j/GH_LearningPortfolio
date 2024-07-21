@@ -8,6 +8,6 @@ public class recursionJava {
         }
     }
     public static void main(String[] args) {
-        System.out.println(factorial(8));
+        System.out.println(factorial(5));
     }
 }
