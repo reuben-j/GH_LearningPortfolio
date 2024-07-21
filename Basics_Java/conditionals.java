@@ -78,7 +78,5 @@ public class conditionals {
                 System.out.println(l); //12 23 34 45
             }
         }
-
-        
     }
 }
