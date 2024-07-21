@@ -15,6 +15,14 @@ public class methods {
         }
     }
 
+    static int add(int ab, int bc) {
+        return ab + bc;
+    }
+
+    static float add(float cd, float de) {
+        return cd + de;
+    }
+
     static int returnSum(int a, int b) {
         return a + b;
     }
@@ -27,5 +35,16 @@ public class methods {
         int sum = returnSum(10, 90); // allocate variable value with function
         System.out.println(returnSum(13, 23));
         System.out.println(sum);
+
+        // function overloading, uses the same function name but differing parameters will
+        // dictate which actual function is used
+
+        // below shows add function with floats
+        float myFloat = add(21.32f, 39.21f);
+        System.out.println(myFloat);
+
+        // add function with ints
+        int myNewInt = add(12, 21);
+        System.out.println(myNewInt);
     }
 }
