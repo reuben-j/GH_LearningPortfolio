@@ -20,7 +20,7 @@ int main() {
     // get an iterator pointing to first element of map
     map<string, string>::iterator it = myMap.begin();
 
-    // // iterate through map
+    // iterate through map
     while (it != myMap.end()) { // while the iterator does not equal last member of map
         cout << "Key: " << it->first // print key then first part of iterator member
             << " - Value: " << it->second << endl; // print second part of first iterator
