@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <cmath>
 
 using namespace std;
 
@@ -12,7 +13,10 @@ int main() {
         }
         number/= 10;
     }
-    cout << heighest;
+    cout << heighest << endl;
+
+    cout << sqrt(36) << endl << cbrt(8) << endl;
+
         
 }
 
