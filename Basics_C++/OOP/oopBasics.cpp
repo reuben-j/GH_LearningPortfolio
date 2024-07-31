@@ -34,5 +34,9 @@ int main() {
     newPersonAbi.age = 23;
     newPersonAbi.printMethod(); // call function from parent class
 
-    cout << "My age x10 is: " << newPersonAbi.returnAge();
+    cout << "My age x10 is: " << newPersonAbi.returnAge() << endl;
+
+    cout << "Reuben age plus Abi age: " << newObjReuben.age + newPersonAbi.age << endl;
+
+
 }
