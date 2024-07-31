@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
@@ -21,13 +22,13 @@ int main() {
     int num1 = 10;
     double dub1 = 3.0;
 
-    cout << num1 / dub1;
+    cout << num1 / dub1 << endl;
 
-    static_cast<double>(num1);
+    // static_cast<double>(num1);
 
     double newDouble = 13.123123123;
 
-    cout << setprecision(2)
+    cout << setprecision(4) << newDouble;
 
 }
 
