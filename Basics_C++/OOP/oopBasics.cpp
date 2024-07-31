@@ -11,9 +11,12 @@ class MyClass { // class declaration and naming
         }
 };
 
-class Person: public MyClass {
+class Person: public MyClass { // new class inherit from previous class
     public:
-        string faveFood;
+        string faveFood; // new value declaration
+        int returnAge() { // new class method with return value int
+            return age * 10; // return age * 10
+        }
 };
 
 int main() {
@@ -28,6 +31,8 @@ int main() {
 
     newPersonAbi.faveFood = "Chocolate"; // attribute declaration, new and different from parent class
     newPersonAbi.name = "Abi"; // attribute declaration
+    newPersonAbi.age = 23;
     newPersonAbi.printMethod(); // call function from parent class
 
+    cout << "My age x10 is: " << newPersonAbi.returnAge();
 }
