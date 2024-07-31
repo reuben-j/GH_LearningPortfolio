@@ -15,8 +15,19 @@ int main() {
     }
     cout << heighest << endl;
 
+    // sqaure and cube root
     cout << sqrt(36) << endl << cbrt(8) << endl;
 
-        
+    int num1 = 10;
+    double dub1 = 3.0;
+
+    cout << num1 / dub1;
+
+    static_cast<double>(num1);
+
+    double newDouble = 13.123123123;
+
+    cout << setprecision(2)
+
 }
 
