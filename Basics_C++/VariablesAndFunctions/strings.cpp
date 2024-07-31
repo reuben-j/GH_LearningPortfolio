@@ -95,4 +95,8 @@ int main() {
     reverse(toBeReversed.begin(), toBeReversed.end());
         cout << toBeReversed << endl; //output olleh
     //* Easi;y reverse string by passing beginning and end of original string
+
+    //TODO string.empty() returns true if length of string is 0
+    string emptyTest = "";
+    cout << bool(emptyTest.empty()); // returns 1 because is true
 }
