@@ -98,5 +98,18 @@ int main() {
 
     //TODO string.empty() returns true if length of string is 0
     string emptyTest = "";
-    cout << bool(emptyTest.empty()); // returns 1 because is true
+    cout << bool(emptyTest.empty()) << endl; // returns 1 because is true
+
+    // TODO string.starts_with and ends_with(substring)
+    string starter = "geezer";
+    if(starter.starts_with("ge")) {
+        cout << "it does start with ge!" << endl;
+    } else {
+        cout << "it doesn't :(" << endl;
+    }
+
+    string ender = "yeeahmattee";
+    if(ender.ends_with("tee")) {
+        cout << "Yeah bbuddy!" << endl;
+    }
 }
