@@ -28,7 +28,11 @@ int main() {
 
     double newDouble = 13.123123123;
 
-    cout << setprecision(4) << newDouble;
+    cout << setprecision(4) << newDouble << endl;
 
+    long long value1 = 9'223'372'036'854'775'807LL;
+
+    
+    
 }
 
