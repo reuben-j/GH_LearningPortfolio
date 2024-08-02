@@ -32,7 +32,10 @@ int main() {
 
     long long value1 = 9'223'372'036'854'775'807LL;
 
-    
+    // make long numbers more readable by using single quotation marks at 
+    // consistent intervals
+
+    long myLong = 123'321'321;
     
 }
 
