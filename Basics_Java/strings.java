@@ -32,5 +32,13 @@ public class strings {
         String myString = "00";
         String myNewString = myInt + myString;
         System.out.println(myNewString); //1200
+
+        // string.contains(substring)
+        String containString = "HiyaBuddy";
+        if(containString.contains("Buddy")) {
+            System.out.println("True"); // true
+        } else {
+            System.out.println("False"); 
+        }
     }
 }
