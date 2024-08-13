@@ -18,6 +18,8 @@ int main() {
         cout << numArray[i] << " ";
     }
 
-    
-    
+    cout << endl;
+    for(auto i : numArray) {
+        cout << i << " ";
+    }
 }
