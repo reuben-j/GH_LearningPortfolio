@@ -48,30 +48,30 @@ class linkedlist {
         temp->next = newNode; // allocates the next ptr of the previously found last member of list to the newly created node
     }
 
-    void deleteNodeByValue(int value) {
-        if(head == nullptr) return;
+    void deleteNodeByValue(int value) { //this function will delete list member of chosen value
+        if(head == nullptr) return; // if list empty, return 
 
-        if(head->dataNum == value) {
-            Node* temp = head;
-            head = head->next;
-            delete temp;
+        if(head->dataNum == value) { //check if head of list is the value
+            Node* temp = head; // create temp Node copy of head
+            head = head->next; // allocate value of head as value of next
+            delete temp; // delete last stored copy of head
+            return; // return as successful
+        }
+
+        Node* current = head; // create new Node with data of head
+        Node* previous = nullptr; // create Node previous with nullptr value to be used next
+        while(current != nullptr && current->dataNum != value) { // while current member has a value and the value is not the one being searched for
+            previous = current; //allocated previous to current
+            current = current->next; // allocated current to next
+        } //this loop is to essentially search for the specified value and stop loop on that member of list
+
+        if(current == nullptr) { // if the loop finishes and value is not found
+            cout << "Value {" << value << "} to be deleted not found!\n"; 
             return;
         }
-
-        Node* current = head;
-        Node* previous = nullptr;
-        while(current != nullptr && current->dataNum != value) {
-            previous = current;
-            current = current->next;
-        }
-
-        if(current == nullptr) {
-            cout << "Value {" << value << "} to be deleted not found!\n";
-            return;
-        }
-
-        previous->next = current->next;
-        delete current;
+        previous->next = current->next; //considering the value is found, allocate previous Node next ptr to current next ptr, essentially removing ptr reference of target value
+        delete current; // delete node of target value
+       
     }
 
     void displayList() const { //member function that will display members of linked list
@@ -90,10 +90,11 @@ int main() {
     linkedlist list;
     list.insertAtBeginning(123);
     list.insertAtBeginning(31);
-
     list.insertAtEndOfList(3123);
 
-    list.deleteNodeByValue(1);
+    list.displayList();
+
+    list.deleteNodeByValue(31);
 
     list.displayList();
 
