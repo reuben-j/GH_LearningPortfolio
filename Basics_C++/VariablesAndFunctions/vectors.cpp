@@ -54,7 +54,7 @@ int main()
     //TODO how to best iterate through vector
     vector<string> testVector = {"Reuben", "Abigail", "Marcus"};
     for(auto i : testVector) {
-        //! cout << i << " "; //ouput Reuben Abigail Marcus
+         cout << i << " "; //ouput Reuben Abigail Marcus
     }
     //* Utilising the auto variable, iterate easily through a vector
 
@@ -257,7 +257,23 @@ int main()
     for(auto i : sortingVec) {
         cout << i << " ";
     }
-}
 
+    vector<int> vec101 {15, 25, 35, 45, 55, 65};
+    vector<int> vec202 {11, 21, 31, 41, 51, 61};
+
+    for(auto i : vec101) {
+        for(auto y : vec202) {
+            cout << i << y << endl;
+        }
+    }
+
+
+    vector<string> VecNames = {"Reuben", "Abi", "Marcus"};
+    for (auto str : VecNames) {
+        cout << str << endl;
+    }
+    cout << VecNames[0];
+    
+}
 // to update code runner to allow c++20 features, update json file using this link for info: 
 // https://github.com/formulahendry/vscode-code-runner/issues/1052 ˜
