@@ -32,13 +32,14 @@ class linkedlist {
         head=newNode; //allocates value of head to newly declared value
     }
 
-    void displayList() const {
-        Node* temp = head;
-        while (temp != nullptr) {
-            cout << temp->dataNum << " -> ";
-            temp = temp->next;
+    void displayList() const { //member function that will display members of linked list
+    // use of the const keyword above means there will be no alterations to the list itself
+        Node* temp = head; //creates a temporary pointer of type *Node that points to head of list
+        while (temp != nullptr) { // loop through temp while value is not null
+            cout << temp->dataNum << " -> "; // print data from current node and use -> spacer
+            temp = temp->next; // allocate temp to next node in list
         }
-        cout << "nullptr" << endl;
+        cout << "nullptr" << endl; //visualise end of list
     }
 };
 
