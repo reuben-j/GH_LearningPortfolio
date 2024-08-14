@@ -32,20 +32,20 @@ class linkedlist {
         head=newNode; //allocates value of head to newly declared value
     }
 
-    void insertAtEndOfList(int value) {
-        Node* newNode = new Node();
-        newNode->dataNum = value;
-        newNode->next=nullptr;
+    void insertAtEndOfList(int value) { // this method adds new member to end of list
+        Node* newNode = new Node(); // create new node 
+        newNode->dataNum = value; // allocate data according to what is passed to function
+        newNode->next=nullptr; // allocate next ptr to nullptr as this will be last member in list
 
-        if(head == nullptr) {
+        if(head == nullptr) { // if list is empty, make this head node
             head = newNode;
         }
-
-        Node* temp = head;
-        while(temp->next != nullptr) {
-            temp = temp->next;
-        }
-        temp->next = newNode;
+        //the below will always be run regardless if list is empty or not
+        Node* temp = head; // create temp node
+        while(temp->next != nullptr) { // loop through list members and see if their next ptr is null or not
+            temp = temp->next; // if it is not null, continue to loop
+        } // once a next ptr with value null is found, the last temp will be the current last member of the list
+        temp->next = newNode; // allocates the next ptr of the previously found last member of list to the newly created node
     }
 
     void displayList() const { //member function that will display members of linked list
