@@ -32,6 +32,22 @@ class linkedlist {
         head=newNode; //allocates value of head to newly declared value
     }
 
+    void insertAtEndOfList(int value) {
+        Node* newNode = new Node();
+        newNode->dataNum = value;
+        newNode->next=nullptr;
+
+        if(head == nullptr) {
+            head = newNode;
+        }
+
+        Node* temp = head;
+        while(temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+
     void displayList() const { //member function that will display members of linked list
     // use of the const keyword above means there will be no alterations to the list itself
         Node* temp = head; //creates a temporary pointer of type *Node that points to head of list
@@ -50,7 +66,7 @@ int main() {
     list.insertAtBeginning(31);
 
     list.displayList();
-    
+
 
     return 0;
 }
