@@ -241,7 +241,23 @@ int main()
     cout << matrix.size();
     //* Declare the vector by having a vectors of vectors
     //* For the for each loop, see above. Use the first variable as the group for the second for each loop
+
+
+    // sorting a vector in ascending order
+    vector<int> sortingVec{12, 65, 1, 9741, 654, 32, 66};
+    sort(sortingVec.begin(), sortingVec.end());
+    for(auto i : sortingVec) {
+        cout << i << " ";
+    } 
+
+    cout << endl;
+
+    // sorting in descending order
+    sort(sortingVec.begin(), sortingVec.end(), greater<int>());
+    for(auto i : sortingVec) {
+        cout << i << " ";
+    }
 }
 
 // to update code runner to allow c++20 features, update json file using this link for info: 
-// https://github.com/formulahendry/vscode-code-runner/issues/1052 
+// https://github.com/formulahendry/vscode-code-runner/issues/1052 ˜
