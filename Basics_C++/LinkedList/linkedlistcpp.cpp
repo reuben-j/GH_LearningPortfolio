@@ -25,11 +25,11 @@ class linkedlist {
             }
         }
 
-    void insertAtBeginning(int value) {
-        Node* newNode = new Node();
-        newNode->dataNum = value;
-        newNode->next = head;
-        head=newNode;
+    void insertAtBeginning(int value) { // this method of adding to list simply creates new node, allocates data, makes a ptr to previous head then the head pointer is allocated to this new node
+        Node* newNode = new Node(); // creation of new node named newNode
+        newNode->dataNum = value; // value is attained from whatever is passed to function
+        newNode->next = head; // allocates the next pointer to the pre-existing head value
+        head=newNode; //allocates value of head to newly declared value
     }
 
     void displayList() const {
