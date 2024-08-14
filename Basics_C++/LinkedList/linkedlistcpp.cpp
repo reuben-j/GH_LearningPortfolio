@@ -48,6 +48,32 @@ class linkedlist {
         temp->next = newNode; // allocates the next ptr of the previously found last member of list to the newly created node
     }
 
+    void deleteNodeByValue(int value) {
+        if(head == nullptr) return;
+
+        if(head->dataNum == value) {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+            return;
+        }
+
+        Node* current = head;
+        Node* previous = nullptr;
+        while(current != nullptr && current->dataNum != value) {
+            previous = current;
+            current = current->next;
+        }
+
+        if(current == nullptr) {
+            cout << "Value {" << value << "} to be deleted not found!\n";
+            return;
+        }
+
+        previous->next = current->next;
+        delete current;
+    }
+
     void displayList() const { //member function that will display members of linked list
     // use of the const keyword above means there will be no alterations to the list itself
         Node* temp = head; //creates a temporary pointer of type *Node that points to head of list
@@ -64,6 +90,10 @@ int main() {
     linkedlist list;
     list.insertAtBeginning(123);
     list.insertAtBeginning(31);
+
+    list.insertAtEndOfList(3123);
+
+    list.deleteNodeByValue(1);
 
     list.displayList();
 
