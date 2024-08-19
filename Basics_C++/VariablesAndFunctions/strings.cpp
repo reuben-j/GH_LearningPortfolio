@@ -112,4 +112,9 @@ int main() {
     if(ender.ends_with("tee")) {
         cout << "Yeah bbuddy!" << endl;
     }
+
+    string niceOne = "Yeahaa!";
+    cout << niceOne[niceOne.length() - 1];
+
+    niceOne.
 }
