@@ -22,8 +22,6 @@ int main() {
     int num1 = 10;
     double dub1 = 3.0;
 
-    if()
-
     cout << num1 / dub1 << endl;
 
     // static_cast<double>(num1);
