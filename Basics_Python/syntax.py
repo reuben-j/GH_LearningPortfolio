@@ -67,3 +67,7 @@ def newFunc1():
 newFunc1()
 
 ## print(num02) this print function can not access num02 as it was delcared inside the function
+
+# get user input
+getName = input("What is your name? \n")
+print("Hello, " + getName)
