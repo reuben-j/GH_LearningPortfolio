@@ -116,5 +116,6 @@ int main() {
     string niceOne = "Yeahaa!";
     cout << niceOne[niceOne.length() - 1];
 
-    niceOne.
+    
+    
 }

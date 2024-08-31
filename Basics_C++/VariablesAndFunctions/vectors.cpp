@@ -191,6 +191,9 @@ int main()
         for(vector<int>::iterator x = myNewVect.begin(); x != myNewVect.end(); ++x) {
             //! cout << *x << " "; // outputs 1 2 3 4 5 6 7 8 9 10
         }
+
+    myNewVect.erase(myNewVect.begin());
+    
     myNewVect.erase(myNewVect.begin(), myNewVect.begin()+4);
         for(vector<int>::iterator x = myNewVect.begin(); x != myNewVect.end(); ++x) {
             //! cout << *x << " "; // outputs 5 6 7 8 9 10
