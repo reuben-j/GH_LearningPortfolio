@@ -1,0 +1,1 @@
+newVec.insert(newVec[i], min);
