@@ -20,16 +20,31 @@ int main()
     int min = myVec[0];
     int index;
 
-    for (int i = 1; i < myVec.size(); i++)
+    while (myVec.size() != 0)
     {
-
-        cout << myVec[i] << " Vs " << min << "\n";
-
-        if (myVec[i] < min)
+        for (int i = 1; i < myVec.size(); i++)
         {
-            min = myVec[i];
-            index = i;
+
+            cout << myVec[i] << " Vs " << min << "\n";
+
+            if (myVec[i] < min)
+            {
+                min = myVec[i];
+                index = i;
+            }
         }
+        newVec.insert(newVec.end(), min);
+        // 
+        cout << "Size: " << myVec.size() << "\n";
+        cout << "Leftover: " << myVec[1] << "\n";
+        myVec.pop_back();
+        cout << "index: " << index << "\n";
+        // myVec.erase(myVec.begin() + index - 1);
     }
     cout << "Min: " << min << "\n";
+
+    for (auto i : newVec)
+    {
+        cout << i << "\n";
+    }
 }
