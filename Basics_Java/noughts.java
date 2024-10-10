@@ -16,24 +16,40 @@ public class noughts {
                 { '-', '+', '-', '+', '-' },
                 { ' ', '|', ' ', '|', ' ' }
         };
-        char playerOne = playerOneCharSelect();
-        char playerTwo = playerTwoCharSelect();
-        System.out.println("\n------\n");
+        char playerOne = playerCharSelect(1);
+        char playerTwo = playerCharSelect(2);
         printArr(arr);
         for (int i = 0; i < 9; i++) {
             if (gameWon == false) {
                 if (i == 0 || i % 2 == 0) {
-                    int horiTemp = playerOneHoriPrompt(playerOne);
-                    int vertTemp = playerOneVertPrompt(playerOne);
+                    int horiTemp = playerPrompt(playerOne);
+                    int vertTemp = playerPrompt(playerOne);
+                    while (numArr[horiTemp - 1][vertTemp - 1] == 1) {
+                        System.out.println("*** Spot taken, try again. ***");
+                        System.out.print("------------------------------");
+                        printArr(arr);
+                        horiTemp = playerPrompt(playerTwo);
+                        vertTemp = playerPrompt(playerTwo);
+                    }
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerOne);
                     printArr(arr);
                     gameWon = checkWin(arr, playerOne, playerTwo);
                     if (gameWon == true)
                         gameWinner = playerOne;
                 } else {
-                    int horiTemp = playerTwoHoriPrompt(playerTwo);
-                    int vertTemp = playerTwoVertPrompt(playerTwo);
+                    int horiTemp = playerPrompt(playerTwo);
+                    int vertTemp = playerPrompt(playerTwo);
+
+                   // System.out.println(numArr[horiTemp][vertTemp]);
+                    while (numArr[horiTemp - 1][vertTemp - 1] == 1) {
+                        System.out.println("*** Spot taken, try again. ***");
+                        System.out.print("------------------------------");
+                        printArr(arr);
+                        horiTemp = playerPrompt(playerTwo);
+                        vertTemp = playerPrompt(playerTwo);
+                    }
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerTwo);
+
                     printArr(arr);
                     gameWon = checkWin(arr, playerOne, playerTwo);
                     if (gameWon == true)
@@ -44,10 +60,16 @@ public class noughts {
         }
 
         printArr(arr);
-        System.out.println("Well done player: " + gameWinner + ", you won the game!");
+        if (gameWon == true) {
+            System.out.println("Well done player: " + gameWinner + ", you won the game!");
+        } else {
+            System.out.println("Draw!");
+        }
     }
 
     static void printArr(char arr[][]) {
+
+        System.out.println("------\n");
         for (int i = 0; i < 5; i++) {
             for (int y = 0; y < 5; y++) {
                 System.out.print(arr[i][y]);
@@ -57,7 +79,7 @@ public class noughts {
         System.out.println("\n------\n");
     }
 
-    static void playerTurn(char arr[][], int numArr[][], int hori, int vert, char player) {
+    static int[][] playerTurn(char arr[][], int numArr[][], int hori, int vert, char player) {
 
         int horiNumArr = 0, vertNumArr = 0;
         if (hori == 1) {
@@ -88,63 +110,25 @@ public class noughts {
 
         arr[hori][vert] = player;
         numArr[horiNumArr][vertNumArr] = 1;
-        for (int i = 0; i < 3; i++) {
-            for (int y = 0; y < 3; y++) {
-                System.out.print("-" + numArr[i][y]);
-            }
-        }
         System.out.println('\n');
+        return numArr;
     }
 
-    static char playerOneCharSelect() {
+    static char playerCharSelect(int player) {
         // String playerOne;
         Scanner myObj = new Scanner(System.in);
-        System.out.println("Player one - what is your character? ");
+        System.out.println("Player " + player + " - what is your character? ");
         String playerStr = myObj.nextLine();
-        char playerOne = playerStr.charAt(0);
-        return playerOne;
+        char playerChar = playerStr.charAt(0);
+        return playerChar;
     }
 
-    static char playerTwoCharSelect() {
-        // String playerOne;
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Player two - what is your character? ");
-        String playerStr = myObj.nextLine();
-        char playerTwo = playerStr.charAt(0);
-        return playerTwo;
-    }
-
-    ///////////////////////////////////////////////////////////////////////////////
-
-    static int playerOneHoriPrompt(char player) {
+    static int playerPrompt(char player) {
         System.out.println("Player " + player + ", which row would you like to choose?");
         Scanner myObj = new Scanner(System.in);
         int horiChoice = myObj.nextInt();
         return horiChoice;
     }
-
-    static int playerOneVertPrompt(char player) {
-        System.out.println("Player " + player + ", which column would you like to choose?");
-        Scanner myObj = new Scanner(System.in);
-        int horiChoice = myObj.nextInt();
-        return horiChoice;
-    }
-
-    static int playerTwoHoriPrompt(char player) {
-        System.out.println("Player " + player + ", which row would you like to choose?");
-        Scanner myObj = new Scanner(System.in);
-        int horiChoice = myObj.nextInt();
-        return horiChoice;
-    }
-
-    static int playerTwoVertPrompt(char player) {
-        System.out.println("Player " + player + ", which column would you like to choose?");
-        Scanner myObj = new Scanner(System.in);
-        int horiChoice = myObj.nextInt();
-        return horiChoice;
-    }
-
-    ///////////////////////////////////////////////////////////////////////////////
 
     static boolean checkWin(char gameBoard[][], char player1, char player2) {
         if (gameBoard[0][0] == player1 && gameBoard[0][2] == player1 && gameBoard[0][4] == player1) {
@@ -188,5 +172,4 @@ public class noughts {
 
         // diagonal win conditions for both ^
     }
-
 }
