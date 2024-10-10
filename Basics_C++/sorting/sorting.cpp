@@ -3,76 +3,52 @@
 
 using namespace std;
 
-void printVec(vector<int> newVec) {
-    cout << "\n";
+int main()
+{
+    vector<int> vec = {21, 123, 2134, 4032, 345, 5413, 100};
+    vector<int> newVec;
+
+    while (!vec.empty())
+    {
+        int max = vec[0];
+        int index = 0;
+
+        // Find the maximum element in the remaining `vec`
+        for (int i = 1; i < vec.size(); i++)
+        {
+            if (max < vec[i])
+            {
+                max = vec[i];
+                index = i;
+            }
+        }
+
+        // Add max to newVec and remove it from vec
+        newVec.push_back(max);
+        vec.erase(vec.begin() + index);
+
+        // Output current state of newVec
+        cout << "newVec: ";
+        for (auto i : newVec)
+        {
+            cout << i << "-";
+        }
+        cout << "\n";
+    }
+
+    cout << "\nSorted (newVec): ";
     for (auto i : newVec)
     {
         cout << i << "-";
     }
     cout << "\n";
-}
 
-int main()
-{
-
-    vector<int> myVec = {112, 23, 313, 12, 842, 1, 10, 4};
-    vector<int> newVec;
-    newVec.reserve(myVec.size());
-
-    cout << "Unsorted: ";
-    for (auto i : myVec)
+    cout << "Remaining Original (vec): ";
+    for (auto i : vec)
     {
-        cout << i << " ";
+        cout << i << "-";
     }
+    cout << "\n";
 
-    cout << '\n';
-    int min = myVec[0];
-    int index;
-
-    while (myVec.size() != 0)
-    {
-        for (int i = 1; i < myVec.size(); i++)
-        {
-
-            cout << myVec[i] << " Vs " << min << "\n";
-
-            if (myVec[i] < min)
-            {
-                min = myVec[i];
-                index = i;
-            }
-        }
-        newVec.insert(newVec.begin(), min);
-      //  cout << "Size: " << myVec.size() << "\n";
-       // cout << "index: " << index << "\n";
-        if(myVec.size() >= 1) {
-            int temp = myVec.back();
-            cout << "\nBack: " << myVec.back();
-            int temp2 = myVec[index];
-            myVec.back() = temp2;
-            myVec[index] = temp;
-            myVec.pop_back();
-            cout << "Last: " <<myVec.back() << " ";
-            printVec(myVec);
-        } else myVec.pop_back();
-        min = myVec.front();
-      
-        
-    }
-    cout << "Min: " << min << "\n";
-
-    printVec(newVec);
-
-
+    return 0;
 }
-
-/*
-newVec.insert(newVec.end(), min);
-        //
-        cout << "Size: " << myVec.size() << "\n";
-        cout << "Leftover: " << myVec[1] << "\n";
-      //  myVec.pop_back();
-        cout << "index: " << index << "\n";
-        myVec.erase(myVec.begin() + index);
-*/
-
