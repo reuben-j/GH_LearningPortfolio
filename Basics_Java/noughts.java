@@ -6,9 +6,9 @@ public class noughts {
         boolean gameWon = false;
         char gameWinner = ' ';
 
-        int numArr[][] = {{0, 0, 0}, 
-                          {0, 0, 0}, 
-                          {0, 0, 0}};
+        int numArr[][] = { { 0, 0, 0 },
+                { 0, 0, 0 },
+                { 0, 0, 0 } };
         char arr[][] = {
                 { ' ', '|', ' ', '|', ' ' },
                 { '-', '+', '-', '+', '-' },
@@ -28,18 +28,19 @@ public class noughts {
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerOne);
                     printArr(arr);
                     gameWon = checkWin(arr, playerOne, playerTwo);
-                    if(gameWon == true) gameWinner = playerOne;
+                    if (gameWon == true)
+                        gameWinner = playerOne;
                 } else {
                     int horiTemp = playerTwoHoriPrompt(playerTwo);
                     int vertTemp = playerTwoVertPrompt(playerTwo);
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerTwo);
                     printArr(arr);
                     gameWon = checkWin(arr, playerOne, playerTwo);
-                    if(gameWon == true) gameWinner = playerTwo;
+                    if (gameWon == true)
+                        gameWinner = playerTwo;
                 }
             }
-            
-            
+
         }
 
         printArr(arr);
@@ -58,34 +59,41 @@ public class noughts {
 
     static void playerTurn(char arr[][], int numArr[][], int hori, int vert, char player) {
 
-        int horiNumArr, vertNumArr;
-        if (hori == 1)
+        int horiNumArr = 0, vertNumArr = 0;
+        if (hori == 1) {
             hori = 0;
             horiNumArr = 0;
-        if (hori == 2)
+        }
+        if (hori == 2) {
             hori = 2;
             horiNumArr = 1;
-        if (hori == 3)
+        }
+        if (hori == 3) {
             hori = 4;
             horiNumArr = 2;
-
-        if (vert == 1)
+        }
+        if (vert == 1) {
             vert = 0;
             vertNumArr = 0;
-        if (vert == 2)
+        }
+        if (vert == 2) {
             vert = 2;
             vertNumArr = 1;
-        if (vert == 3)
+        }
+
+        if (vert == 3) {
             vert = 4;
             vertNumArr = 2;
+        }
 
         arr[hori][vert] = player;
         numArr[horiNumArr][vertNumArr] = 1;
-        for(int i = 0; i < 3; i++) {
-            for(int y = 0; y < 3; y++) {
-                System.out.println("-" + numArr[i][y] + "-");
+        for (int i = 0; i < 3; i++) {
+            for (int y = 0; y < 3; y++) {
+                System.out.print("-" + numArr[i][y]);
             }
         }
+        System.out.println('\n');
     }
 
     static char playerOneCharSelect() {
