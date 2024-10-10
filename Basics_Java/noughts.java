@@ -22,14 +22,14 @@ public class noughts {
         for (int i = 0; i < 9; i++) {
             if (gameWon == false) {
                 if (i == 0 || i % 2 == 0) {
-                    int horiTemp = playerPrompt(playerOne);
-                    int vertTemp = playerPrompt(playerOne);
+                    int horiTemp = playerPrompt(playerOne, "row");
+                    int vertTemp = playerPrompt(playerOne, "column");
 
                     while (numArr[horiTemp - 1][vertTemp - 1] == 1) {
                         tryAgain();
                         printArr(arr);
-                        horiTemp = playerPrompt(playerTwo);
-                        vertTemp = playerPrompt(playerTwo);
+                        horiTemp = playerPrompt(playerTwo, "row");
+                        vertTemp = playerPrompt(playerTwo, "column");
                     }
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerOne);
                     printArr(arr);
@@ -37,15 +37,15 @@ public class noughts {
                     if (gameWon == true)
                         gameWinner = playerOne;
                 } else {
-                    int horiTemp = playerPrompt(playerTwo);
-                    int vertTemp = playerPrompt(playerTwo);
+                    int horiTemp = playerPrompt(playerTwo, "row");
+                    int vertTemp = playerPrompt(playerTwo, "column");
 
                     // System.out.println(numArr[horiTemp][vertTemp]);
                     while (numArr[horiTemp - 1][vertTemp - 1] == 1) {
                         tryAgain();
                         printArr(arr);
-                        horiTemp = playerPrompt(playerTwo);
-                        vertTemp = playerPrompt(playerTwo);
+                        horiTemp = playerPrompt(playerTwo, "row");
+                        vertTemp = playerPrompt(playerTwo, "column");
                     }
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerTwo);
                     printArr(arr);
@@ -114,8 +114,8 @@ public class noughts {
         return playerChar;
     }
 
-    static int playerPrompt(char player) {
-        System.out.println("Player " + player + ", which row would you like to choose?");
+    static int playerPrompt(char player, String axis) {
+        System.out.println("Player " + player + ", which " + axis + " would you like to choose?");
         Scanner myObj = new Scanner(System.in);
         int horiChoice = myObj.nextInt();
         return horiChoice;
