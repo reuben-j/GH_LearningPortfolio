@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
 
-    vector<int> myVec = {112, 23, 313, 901, 842, 13, 24, 531, 42, 55};
-    vector<int> newVec;
+    vector<int> myVec = {112, 23, 313, 12, 842, 13, 10, 4};
+    
 
     for (auto i : myVec)
     {
@@ -15,21 +15,20 @@ int main()
     }
 
     cout << '\n';
+    int temp = myVec[0];
+    cout << "Index 0: " << myVec[0] << "\n";
+    int min = 0, max = 0;
 
-    for (int i = 0; i < myVec.size() -1; i++)
+    for (int i = 1; i < myVec.size(); i++)
     {
-        int min, max, absmax;
-        while(myVec[i] > myVec[i + 1]) {
-            min = myVec[i]; // value held in min
-            max = myVec[i + 1];
-            myVec[i] = min;
-            myVec[i + 1] = max;
-        }
         
-    }
-    cout << "\n------\n";
-    for (auto i : myVec)
-    {
-        cout << i << " ";
+        cout << myVec[i] << " Vs " << temp << "\n";
+        
+        if (myVec[i] < temp)
+        {
+            temp = myVec[i];
+        } 
+        cout << "Min: " << temp << "\n";
+
     }
 }
