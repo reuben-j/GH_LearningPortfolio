@@ -24,6 +24,7 @@ public class noughts {
                 if (i == 0 || i % 2 == 0) {
                     int horiTemp = playerPrompt(playerOne);
                     int vertTemp = playerPrompt(playerOne);
+
                     while (numArr[horiTemp - 1][vertTemp - 1] == 1) {
                         System.out.println("*** Spot taken, try again. ***");
                         System.out.print("------------------------------");
@@ -40,13 +41,14 @@ public class noughts {
                     int horiTemp = playerPrompt(playerTwo);
                     int vertTemp = playerPrompt(playerTwo);
 
-                   // System.out.println(numArr[horiTemp][vertTemp]);
+                    // System.out.println(numArr[horiTemp][vertTemp]);
                     while (numArr[horiTemp - 1][vertTemp - 1] == 1) {
                         System.out.println("*** Spot taken, try again. ***");
                         System.out.print("------------------------------");
                         printArr(arr);
                         horiTemp = playerPrompt(playerTwo);
                         vertTemp = playerPrompt(playerTwo);
+
                     }
                     playerTurn(arr, numArr, horiTemp, vertTemp, playerTwo);
 
@@ -131,6 +133,7 @@ public class noughts {
     }
 
     static boolean checkWin(char gameBoard[][], char player1, char player2) {
+
         if (gameBoard[0][0] == player1 && gameBoard[0][2] == player1 && gameBoard[0][4] == player1) {
             return true;
         } else if (gameBoard[0][0] == player2 && gameBoard[0][2] == player2 && gameBoard[0][4] == player2) {
@@ -168,8 +171,10 @@ public class noughts {
         } else if (gameBoard[0][4] == player2 && gameBoard[2][2] == player2 && gameBoard[4][0] == player2) {
             return true;
         } else
+            // diagonal win conditions for both ^
+
             return false;
 
-        // diagonal win conditions for both ^
     }
+
 }
