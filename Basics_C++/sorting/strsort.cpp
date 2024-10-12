@@ -19,9 +19,15 @@ int main()
                 first = vec[i];
                 index = i;
             }
-
-            cout << "first: " << first << "\n";
         }
-        
+        vec2.push_back(first);
+         vec.erase(vec.begin() + index);
+        //vec.pop_back();
+    }
+    int num = 0;
+    for (auto i : vec2)
+    {
+        cout << num << ": " << i << "\n";
+        num++;
     }
 }
