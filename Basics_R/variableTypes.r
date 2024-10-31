@@ -29,4 +29,39 @@ class(intToNumer) #numeric
 
 numerToInt <- as.integer(numer1)
 numerToInt #2
+class(numerToInt) #integer
+
+#* Basic Math
+10 + 5
+#15
+
+10 - 5
+#5
+
+10 * 5
+#50
+
+10 ^ 4
+#10,000
+
+10 / 5
+#2
+
+# no % or //
+
+#min -> returns min in set
+min(12, 321, 4) #4
+
+max(21, 32, 541) #541
+
+#sqrt
+sqrt(16) #4
+
+#abs()
+abs(-4.41) #4.41
+
+#ceiling() -> rounds number up to closet int
+ceiling(1.2) #2
+
+floor(1.9) #1
 
