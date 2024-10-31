@@ -42,12 +42,18 @@ class(numerToInt) #integer
 #50
 
 10 ^ 4
+10 ** 4
 #10,000
 
 10 / 5
 #2
 
-# no % or //
+10 %% 4
+# 2
+
+#int division
+4.4 %/% 1
+#4
 
 #min -> returns min in set
 min(12, 321, 4) #4

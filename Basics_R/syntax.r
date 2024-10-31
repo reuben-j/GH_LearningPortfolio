@@ -37,5 +37,7 @@ num1 + num2
 var1 <- var2 <- var3 <- "Chilling"
 paste(var1, "yeah", var2, "mega", var3)
 
-#class()
+#class
 class(var1) #character
+
+# run R through terminal by typing R
