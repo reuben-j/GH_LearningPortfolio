@@ -16,6 +16,12 @@ plot(1:10)
 name <- "Reuben"
 age <- 24
 
+my_var <<- 3
+my_var
+
+3 -> okVar
+okVar
+
 # auto print variables
 name
 age
