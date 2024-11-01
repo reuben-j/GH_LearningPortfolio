@@ -34,3 +34,17 @@ for (x in bool_vec) {
 # vector length
 print(length(bool_vec)) # 4
 
+# sorting a vector -> sorts numerically and alphabetically
+vec1 <- c(1323, 432, 345, 6543, 641, 9875, 12, 355)
+# change from ascending to descending sorting with 'decreasing'
+sort(vec1, decreasing = TRUE)
+
+# sort alphabetically
+vec2 <- c("Abigail", "Reuben", "Marcus", "Jimmy")
+sort(vec2)
+
+# access with index but different to arrays, these start at 1 not 0
+print(vec2[1:2]) # "Abigail" "Reuben" 
+
+# use c() to access a specified number of elements
+vec2[c(1,3)]
