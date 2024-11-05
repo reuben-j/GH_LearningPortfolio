@@ -20,4 +20,4 @@ y_bar <- c(2, 5, 10, 2)
 barplot(y_bar, names.arg = x_bar, col = "darkblue", density = 1)
 
 # bar width and horizontal
-barplot(y_bar, names.arg = x_bar, width = c(1, 2, 4, 2), horiz = TRUE)
+barplot(y_bar, names.arg = x_bar, width = c(1, 2, 4, 2), horiz = FALSE)
