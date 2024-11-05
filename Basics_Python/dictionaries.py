@@ -7,11 +7,11 @@ thisDict = {
 }
 print(thisDict) #{'name': 'Reuben', 'age': 24, 'language': 'English'}
 for x in thisDict:
-    print(x) #name agee language
+    print(x) #name age language
     print(thisDict[x]) # Reuben 24 English 
     
-# dictionaries are ordered, changabel and do not allow duplicates
-# use len(dict) to find lenght of dictionary
+# dictionaries are ordered, changeable and do not allow duplicates
+# use len(dict) to find length of dictionary
 print(len(thisDict)) #3
 print(type(thisDict)) #<class 'dict'>
 
