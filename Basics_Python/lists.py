@@ -209,7 +209,7 @@ print(list02) #[213, 421, 941, 123]
 list03 = list(list02)
 print(list03) #[213, 421, 941, 123]
 
-#join two lists with '+' operator
+# join two lists with '+' operator
 list04 = [12, 21, 23, 32]
 list05 = ["apple", "banana", "cherry"]
 list06 = list04 + list05
