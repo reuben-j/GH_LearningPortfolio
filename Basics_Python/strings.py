@@ -46,7 +46,7 @@ print(string4.replace("Hiya", "Cya")) #output Jumb buddy
 string5 = "lets, look, at, the, duck"
 print(string5.split(",")) #output - ['lets', ' look', ' at', ' the', ' duck']
 
-#string concantenation
+#string concatenation
 str01 = "hiya "
 str02 = "buddy"
 str03 = str01 + str02
@@ -91,7 +91,7 @@ print(str09) #output - Testing the newline
 strCap = "hello mate"
 print(strCap.capitalize()) #output Hello mate
 
-# string.asefold() - Converts string to lower case
+# string.casefold() - Converts string to lower case
 strCaseFold = "HELLO MY BOY"
 print(strCaseFold.casefold()) #output - hello my boy
 
