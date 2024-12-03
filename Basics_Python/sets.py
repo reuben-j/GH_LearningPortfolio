@@ -22,7 +22,7 @@ mySet03 = {1, "2", False}
 print(mySet03) #{False, 1, '2'}
 
 #python recognises sets as:
-print(type(mySet03)) #<class 'set'>
+print(type(mySet03)) # <class 'set'>
 
 #use the constructor set(("item1", "item2")) with double parenthesis
 mySet04 = set((12, 23, 34, 45))
