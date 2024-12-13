@@ -91,7 +91,7 @@ print(newNewestNewDict) # {'brand': 'Peugoet', 'model': '308', 'year': 2008}
 myFamily = {
     "Reuben": {
         "age": 24,
-        "car": "Peugoet"
+        "car": "Peugeoet"
     },
     "Jordan": {
         "age": 25,
