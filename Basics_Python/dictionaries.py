@@ -59,7 +59,7 @@ print(thatDict) #{}
 
 # to loop through a dictionary
 newDict = {
-    "brand": "Peugoet",
+    "brand": "Peugeot",
     "model": "308",
     "year": 2008
 }
@@ -76,22 +76,22 @@ for x in newDict.keys():
 # to loop through both keys and values:
 for x, y in newDict.items():
     print(x, y) 
-    # brand Peugoet
+    # brand Peugeot
     # model 308
     # year 2008
     
 # to copy one dict to another 
 newestDict = newDict.copy()
-print(newestDict) #{'brand': 'Peugoet', 'model': '308', 'year': 2008}
+print(newestDict) #{'brand': 'Peugeot', 'model': '308', 'year': 2008}
 
 newNewestNewDict = dict(newDict)
-print(newNewestNewDict) # {'brand': 'Peugoet', 'model': '308', 'year': 2008}
+print(newNewestNewDict) # {'brand': 'Peugeot', 'model': '308', 'year': 2008}
 
-# create a nested dictionary, one dictionary that holds three dicionaries
+# create a nested dictionary, one dictionary that holds three dictionaries
 myFamily = {
     "Reuben": {
         "age": 24,
-        "car": "Peugeoet"
+        "car": "Peugeot"
     },
     "Jordan": {
         "age": 25,
@@ -155,7 +155,7 @@ y = 10
 dictKeys = dict.fromkeys(x, y)
 print(dictKeys) # {'key1': 10, 'key2': 10, 'key3': 10}
 
-# use dict.defauly(key, value) to have a default value set within a dictionary. If not set, it will be called automatically.
+# use dict.default(key, value) to have a default value set within a dictionary. If not set, it will be called automatically.
 DictDefault = {
     "brand": "ford",
     "model" : "GT"
