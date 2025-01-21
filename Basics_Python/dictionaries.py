@@ -80,7 +80,7 @@ for x, y in newDict.items():
     # model 308
     # year 2008
     
-# to copy one dict to another 
+# to copy one dictionary to another 
 newestDict = newDict.copy()
 print(newestDict) #{'brand': 'Peugeot', 'model': '308', 'year': 2008}
 
