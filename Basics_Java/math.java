@@ -3,7 +3,7 @@ public class math {
         // Math.min(a, b) to return min number
         System.out.println(Math.min(13, 10)); //10
 
-        // Math.max to do oppostie
+        // Math.max to do opposite
         System.out.println(Math.max(99, 99.1)); //99.1
 
         // Return square root
