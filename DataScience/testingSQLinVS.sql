@@ -32,3 +32,5 @@ CSV HEADER;
 
 SELECT * FROM student_habits;
 
+SELECT part_time_job, exam_score FROM student_habits
+WHERE exam_score > 80;
